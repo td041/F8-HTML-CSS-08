@@ -1252,6 +1252,14 @@ button {
   position: relative;
   padding: 0 30px 0 50px;
 }
+.sub-menu__not-main {
+  position: static;
+  inset: unset;
+  display: flex;
+  gap: 50px;
+  max-height: calc(min(582px, 100vh) - 60px);
+  padding-left: 0;
+}
 
 .main-menu {
   --main-menu-width: 292px;
