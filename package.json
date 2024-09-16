@@ -1,0 +1,15 @@
+{
+  "name": "f8-project8",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch assets/scss:assets/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.78.0"
+  }
+}

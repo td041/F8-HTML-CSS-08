@@ -1,0 +1,119 @@
+@use "../abstracts";
+.sub-menu {
+  display: none;
+  position: absolute;
+  inset: 0 0 0 var(--main-menu-width);
+  overflow-y: auto;
+  padding-left: var(--menu-padding);
+  height: 100%;
+  transition: 1s;
+  gap: var(--menu-padding);
+  &__column {
+    position: relative;
+    padding: 0 30px 0 50px;
+  }
+}
+.main-menu {
+  --main-menu-width: 292px;
+  --menu-padding: 30px;
+  width: var(--main-menu-width);
+}
+.drop-down {
+  position: absolute;
+  padding-top: 54px;
+  width: min(1240px, 100%);
+  display: none;
+  left: 0;
+  &__inner {
+    max-height: min(582px, 100vh);
+    position: relative;
+    padding: 30px 62px 30px 30px;
+    border-radius: 20px;
+    background: var(--dropdown-bg-color);
+    box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
+    &::before {
+      content: url(../icons/dropdown-arrow.svg);
+      display: inline-block;
+      position: absolute;
+      top: -13px;
+      left: var(--arrow-left-pos);
+      transform: translateX(-50%);
+      filter: var(--dropdown-arrow);
+    }
+  }
+  &__sub-menu {
+    @extend .drop-down__menu;
+    position: relative;
+    margin: 0 -30px 0 -50px;
+    margin-top: 22px;
+  }
+  &__menu {
+    max-height: calc(min(582px, 100vh) - 30px * 2);
+    padding-left: 50px;
+    overflow-y: auto;
+    &:first-child {
+      border-right: 1px solid var(--dropdown-menu-border);
+    }
+  }
+  &__row {
+    height: 100%;
+    position: relative;
+  }
+  &__heading {
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 19px;
+  }
+  &__image-1 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    left: 0;
+    top: 0;
+    @include abstracts.breakpoint(xl) {
+      display: none;
+    }
+  }
+  &__image-2 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    left: 12px;
+    top: 12px;
+    filter: var(--dropdown-icon-color);
+    @include abstracts.breakpoint(xl) {
+      display: none;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    &--active .sub-menu {
+      display: flex;
+    }
+  }
+  &__item--active > &__link,
+  &__item:hover > &__link {
+    color: #0071dc;
+    font-weight: 500;
+  }
+  &__link {
+    padding: 7px 0;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    line-height: 142.857%;
+    white-space: nowrap;
+    transition: 0.5s;
+    &:hover {
+      color: #0071dc;
+      font-weight: 500;
+    }
+  }
+}
