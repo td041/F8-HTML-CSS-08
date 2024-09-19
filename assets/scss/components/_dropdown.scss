@@ -1,39 +1,18 @@
 @use "../abstracts";
-.sub-menu {
-  display: none;
-  position: absolute;
-  inset: 0 0 0 var(--main-menu-width);
-  overflow-y: auto;
-  padding-left: var(--menu-padding);
-  height: 100%;
-  transition: 1s;
-  gap: var(--menu-padding);
-  &__column {
-    position: relative;
-    padding: 0 30px 0 50px;
-  }
-  &__not-main {
-    position: static;
-    inset: unset;
-    display: flex;
-    gap: 50px;
-    max-height: calc(min(582px, 100vh) - 30px * 2);
-    padding-left: 0;
-  }
-}
-.main-menu {
+.drop-down {
   --main-menu-width: 292px;
   --menu-padding: 30px;
-  width: var(--main-menu-width);
-}
-.drop-down {
   position: absolute;
   padding-top: 54px;
   width: min(1240px, 100%);
   display: none;
   left: 0;
+  @include abstracts.breakpoint(lg) {
+    display: block;
+    position: static;
+    padding-top: 0;
+  }
   &__inner {
-    max-height: min(582px, 100vh);
     position: relative;
     padding: 30px 62px 30px 30px;
     border-radius: 20px;
@@ -48,24 +27,40 @@
       transform: translateX(-50%);
       filter: var(--dropdown-arrow);
     }
-  }
-  &__sub-menu {
-    @extend .drop-down__menu;
-    position: relative;
-    margin: 0 -30px 0 -50px;
-    margin-top: 22px;
-  }
-  &__menu {
-    max-height: calc(min(582px, 100vh) - 30px * 2);
-    padding-left: 50px;
-    overflow-y: auto;
-    &:first-child {
-      border-right: 1px solid var(--dropdown-menu-border);
+    @include abstracts.breakpoint(lg) {
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      padding: 0 40px 0;
+      &::before {
+        content: none;
+      }
     }
   }
   &__row {
     height: 100%;
     position: relative;
+  }
+  &__main-menu {
+    display: flex;
+    gap: 14px;
+    max-height: calc(min(582px, 100vh) - 30px * 2);
+    + .drop-down__main-menu {
+      margin-top: 23px;
+    }
+    @include abstracts.breakpoint(lg) {
+      border-right: none;
+      height: auto;
+      width: 100%;
+    }
+  }
+  &__main {
+    border-right: 1px solid var(--dropdown-menu-border);
+    width: var(--main-menu-width);
+    overflow-y: auto;
+    @include abstracts.breakpoint(xl) {
+      width: 230px;
+    }
   }
   &__heading {
     white-space: nowrap;
@@ -74,6 +69,17 @@
     line-height: 150%;
     margin-bottom: 19px;
   }
+  &__icons {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    @include abstracts.breakpoint(xl) {
+      display: none;
+    }
+    @include abstracts.breakpoint(lg) {
+      display: block;
+    }
+  }
   &__image-1 {
     position: absolute;
     width: 30px;
@@ -81,21 +87,15 @@
     object-fit: contain;
     left: 0;
     top: 0;
-    @include abstracts.breakpoint(xl) {
-      display: none;
-    }
   }
   &__image-2 {
     position: absolute;
     width: 24px;
     height: 24px;
     object-fit: contain;
-    left: 12px;
-    top: 12px;
+    bottom: 0;
+    right: 0;
     filter: var(--dropdown-icon-color);
-    @include abstracts.breakpoint(xl) {
-      display: none;
-    }
   }
   &__list {
     display: flex;
@@ -104,6 +104,7 @@
   &__item {
     &--active .sub-menu {
       display: flex;
+      gap: var(--menu-padding);
     }
   }
   &__item--active > &__link,
@@ -123,5 +124,36 @@
       color: #0071dc;
       font-weight: 500;
     }
+  }
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  inset: 0 0 0 var(--main-menu-width);
+  overflow-y: auto;
+  padding-left: var(--menu-padding);
+  height: 100%;
+  transition: 1s;
+  gap: var(--menu-padding);
+  &__column {
+    position: relative;
+    gap: var(--menu-padding);
+  }
+  &__not-main {
+    position: static;
+    inset: unset;
+    display: flex;
+    padding-left: 0;
+    gap: 50px;
+    max-height: calc(min(582px, 100vh) - 30px * 2);
+  }
+  @include abstracts.breakpoint(xl) {
+    left: 240px;
+  }
+  @include abstracts.breakpoint(lg) {
+    position: static;
+    flex-direction: column;
+    display: flex;
+    padding-left: 0;
   }
 }

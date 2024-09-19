@@ -1,13 +1,16 @@
 <div class="container">
   <div class="bar">
-    <a href="#!" class="bar__more">
+    <a href="#!" class="bar__more js-toggle d-none d-lg-block" toggle-target="#nav-bar">
       <img src="./assets/icons/more.svg" alt="" class="bar__more--icon icon" />
     </a>
     <a href="#!" class="logo">
       <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
       <h1 class="logo__title">grocerymart</h1>
     </a>
-    <nav class="nav-bar">
+    <nav id="nav-bar" class="nav-bar show">
+      <button class="nav-bar__close js-toggle" toggle-target="#nav-bar">
+        <img src="./assets/icons/arrow-left.svg" alt="" />
+      </button>
       <ul class="nav-bar__list js-dropdown-list">
         <li class="nav-bar__item">
           <a href="#!" class="nav-bar__link"
@@ -17,193 +20,223 @@
           <div class="drop-down js-dropdown">
             <div class="drop-down__inner">
               <div class="drop-down__row">
-                <div class="drop-down__menu main-menu">
-                  <img src="./assets/icons/circle.svg" alt="" class="drop-down__image-1" />
-                  <img src="./assets/icons/dropdown-icon1.svg" alt="" class="drop-down__image-2" />
-                  <h2 class="drop-down__heading">All Departments</h2>
-                  <ul class="drop-down__list js-menu-list">
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Savings & Featured Shops</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item--active">
-                      <a href="#!" class="drop-down__link">Electronics</a>
-                      <div class="sub-menu">
-                        <div class="sub-menu__column">
-                          <img src="./assets/icons/rectangle.svg" alt="" class="drop-down__image-1" />
-                          <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
-                          <h2 class="drop-down__heading">TV & Video</h2>
-                          <ul class="drop-down__list">
-                            <li>
-                              <a href="#!" class="drop-down__link">Shop all TVs</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">TVs by Size</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Smart TVs</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Roku TVs</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Streaming</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">TV Mounts & Accessories</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">DVD & Blu-Ray PlayersBaby</a>
-                            </li>
-                          </ul>
-                          <div class="drop-down__sub-menu">
-                            <img src="./assets/icons/blue-star.svg" alt="" class="drop-down__image-1" />
-                            <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
-                            <h2 class="drop-down__heading">Wearable Technology</h2>
-                            <ul class="drop-down__list">
-                              <li>
-                                <a href="#!" class="drop-down__link">Galaxy Watch</a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">Apple Watch</a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">Fitness Trackers</a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">Virtual Reality</a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">Headphones</a>
-                              </li>
-                            </ul>
+                <div class="drop-down__main-menu drop-down__main">
+                  <div class="drop-down__icons">
+                    <img src="./assets/icons/circle.svg" alt="" class="drop-down__image-1 d-lg-none" />
+                    <img src="./assets/icons/dropdown-icon1.svg" alt="" class="drop-down__image-2 d-lg-none" />
+                  </div>
+                  <div class="drop-down__content">
+                    <h2 class="drop-down__heading d-lg-none">All Departments</h2>
+                    <ul class="drop-down__list js-menu-list">
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Savings & Featured Shops</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item--active">
+                        <a href="#!" class="drop-down__link">Electronics</a>
+                        <div class="sub-menu sub-menu__main">
+                          <div class="sub-menu__column sub-menu__column--main">
+                            <div class="drop-down__main-menu">
+                              <div class="drop-down__icons">
+                                <img src="./assets/icons/rectangle.svg" alt="" class="drop-down__image-1" />
+                                <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
+                              </div>
+                              <div class="drop-down__content">
+                                <h2 class="drop-down__heading">TV & Video</h2>
+                                <ul class="drop-down__list">
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Shop all TVs</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">TVs by Size</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Smart TVs</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Roku TVs</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Streaming</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">TV Mounts & Accessories</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">DVD & Blu-Ray PlayersBaby</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="drop-down__main-menu">
+                              <div class="drop-down__icons">
+                                <img src="./assets/icons/blue-star.svg" alt="" class="drop-down__image-1" />
+                                <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
+                              </div>
+                              <div class="drop-down__content">
+                                <h2 class="drop-down__heading">Wearable Technology</h2>
+                                <ul class="drop-down__list">
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Galaxy Watch</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Apple Watch</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Fitness Trackers</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Virtual Reality</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Headphones</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sub-menu__column sub-menu__column--main">
+                            <div class="drop-down__main-menu">
+                              <div class="drop-down__icons">
+                                <img src="./assets/icons/triangle.svg" alt="" class="drop-down__image-1" />
+                                <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
+                              </div>
+                              <div class="drop-down__content">
+                                <h2 class="drop-down__heading">Computers</h2>
+                                <ul class="drop-down__list">
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Shop All Computers</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Laptops</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">PC Gaming</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Monitors</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Chromebook</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Printers & Ink</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Shop all TVs</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Computer Accessories</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Desktops</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Tax Software</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Computer Software</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">PC Finder</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sub-menu__column sub-menu__column--main">
+                            <div class="drop-down__main-menu">
+                              <div class="drop-down__icons">
+                                <img src="./assets/icons/pac.svg" alt="" class="drop-down__image-1" />
+                                <img src="./assets/icons/dropdown-icon4.svg" alt="" class="drop-down__image-2" />
+                              </div>
+                              <div class="drop-down__content">
+                                <h2 class="drop-down__heading">Savings</h2>
+                                <ul class="drop-down__list">
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Tech Savings</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Overstock Savings</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Tech Rollbacks</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="drop-down__main-menu">
+                              <div class="drop-down__icons">
+                                <img src="./assets/icons/hexagon.svg" alt="" class="drop-down__image-1" />
+                                <img src="./assets/icons/dropdown-icon5.svg" alt="" class="drop-down__image-2" />
+                              </div>
+                              <div class="drop-down__content">
+                                <h2 class="drop-down__heading">Cell Phones</h2>
+                                <ul class="drop-down__list">
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Wireless Deals</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">5G Phones </a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Prepaid Phones & Plans </a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Refurbished Phones</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">iPhone Accessories</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Cases & Screen Protectors</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!" class="drop-down__link">Unlocked Phones</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="sub-menu__column">
-                          <img src="./assets/icons/triangle.svg" alt="" class="drop-down__image-1" />
-                          <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
-                          <h2 class="drop-down__heading">Computers</h2>
-                          <ul class="drop-down__list">
-                            <li>
-                              <a href="#!" class="drop-down__link">Shop All Computers</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Laptops</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">PC Gaming</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Monitors</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Chromebook</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Printers & Ink</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Shop all TVs</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Computer Accessories</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Desktops</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Tax Software</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Computer Software</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">PC Finder</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="sub-menu__column">
-                          <img src="./assets/icons/pac.svg" alt="" class="drop-down__image-1" />
-                          <img src="./assets/icons/dropdown-icon4.svg" alt="" class="drop-down__image-2" />
-                          <h2 class="drop-down__heading">Savings</h2>
-                          <ul class="drop-down__list">
-                            <li>
-                              <a href="#!" class="drop-down__link">Tech Savings</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Overstock Savings</a>
-                            </li>
-                            <li>
-                              <a href="#!" class="drop-down__link">Tech Rollbacks</a>
-                            </li>
-                          </ul>
-                          <div class="drop-down__sub-menu">
-                            <img src="./assets/icons/hexagon.svg" alt="" class="drop-down__image-1" />
-                            <img src="./assets/icons/dropdown-icon5.svg" alt="" class="drop-down__image-2" />
-                            <h2 class="drop-down__heading">Cell Phones</h2>
-                            <ul class="drop-down__list">
-                              <li>
-                                <a href="#!" class="drop-down__link">Wireless Deals</a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">5G Phones </a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">Prepaid Phones & Plans </a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">Refurbished Phones</a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">iPhone Accessories</a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">Cases & Screen Protectors</a>
-                              </li>
-                              <li>
-                                <a href="#!" class="drop-down__link">Unlocked Phones</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Clothing, Shoes & Accessories</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Home, Furniture & Appliances</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Toys & Video Games</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Home Improvement</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Baby</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Household Essentials</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Personal Care</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Patio & Garden </a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Sports & Outdoors</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Gift Cards</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Auto, Tires and Industrial</a>
-                    </li>
-                    <li class="drop-down__item">
-                      <a href="#!" class="drop-down__link">Movies, Music & Books</a>
-                    </li>
-                  </ul>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Clothing, Shoes & Accessories</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Home, Furniture & Appliances</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Toys & Video Games</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Home Improvement</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Baby</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Household Essentials</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Personal Care</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Patio & Garden </a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Sports & Outdoors</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Gift Cards</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Auto, Tires and Industrial</a>
+                      </li>
+                      <li class="drop-down__item">
+                        <a href="#!" class="drop-down__link">Movies, Music & Books</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -219,184 +252,216 @@
               <div class="drop-down__row">
                 <div class="sub-menu sub-menu__not-main">
                   <div class="sub-menu__column">
-                    <img src="./assets/icons/rectangle.svg" alt="" class="drop-down__image-1" />
-                    <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
-                    <h2 class="drop-down__heading">TV & Video</h2>
-                    <ul class="drop-down__list">
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop all TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">TVs by Size</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Smart TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Roku TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Streaming</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">TV Mounts & Accessories</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">DVD & Blu-Ray PlayersBaby</a>
-                      </li>
-                    </ul>
-                    <div class="drop-down__sub-menu">
-                      <img src="./assets/icons/blue-star.svg" alt="" class="drop-down__image-1" />
-                      <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
-                      <h2 class="drop-down__heading">Wearable Technology</h2>
-                      <ul class="drop-down__list">
-                        <li>
-                          <a href="#!" class="drop-down__link">Galaxy Watch</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Apple Watch</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Fitness Trackers</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Virtual Reality</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Headphones</a>
-                        </li>
-                      </ul>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/pac.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon5.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">TV & Video</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop all TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">TVs by Size</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Smart TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Roku TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Streaming</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">TV Mounts & Accessories</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">DVD & Blu-Ray PlayersBaby</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/blue-star.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Wearable Technology</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Galaxy Watch</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Apple Watch</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Fitness Trackers</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Virtual Reality</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Headphones</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div class="sub-menu__column">
-                    <img src="./assets/icons/triangle.svg" alt="" class="drop-down__image-1" />
-                    <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
-                    <h2 class="drop-down__heading">Computers</h2>
-                    <ul class="drop-down__list">
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop All Computers</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Laptops</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">PC Gaming</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Monitors</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Chromebook</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Printers & Ink</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop all TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Computer Accessories</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Desktops</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Tax Software</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Computer Software</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">PC Finder</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="sub-menu__column">
-                    <img src="./assets/icons/pac.svg" alt="" class="drop-down__image-1" />
-                    <img src="./assets/icons/dropdown-icon4.svg" alt="" class="drop-down__image-2" />
-                    <h2 class="drop-down__heading">Savings</h2>
-                    <ul class="drop-down__list">
-                      <li>
-                        <a href="#!" class="drop-down__link">Tech Savings</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Overstock Savings</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Tech Rollbacks</a>
-                      </li>
-                    </ul>
-                    <div class="drop-down__sub-menu">
-                      <img src="./assets/icons/hexagon.svg" alt="" class="drop-down__image-1" />
-                      <img src="./assets/icons/dropdown-icon5.svg" alt="" class="drop-down__image-2" />
-                      <h2 class="drop-down__heading">Cell Phones</h2>
-                      <ul class="drop-down__list">
-                        <li>
-                          <a href="#!" class="drop-down__link">Wireless Deals</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">5G Phones </a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Prepaid Phones & Plans </a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Refurbished Phones</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">iPhone Accessories</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Cases & Screen Protectors</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Unlocked Phones</a>
-                        </li>
-                      </ul>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/triangle.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Computers</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop All Computers</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Laptops</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">PC Gaming</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Monitors</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Chromebook</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Printers & Ink</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop all TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Computer Accessories</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Desktops</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Tax Software</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Computer Software</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">PC Finder</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div class="sub-menu__column">
-                    <img src="./assets/icons/triangle.svg" alt="" class="drop-down__image-1" />
-                    <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
-                    <h2 class="drop-down__heading">Computers</h2>
-                    <ul class="drop-down__list">
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop All Computers</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Laptops</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">PC Gaming</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Monitors</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Chromebook</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Printers & Ink</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop all TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Computer Accessories</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Desktops</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Tax Software</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Computer Software</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">PC Finder</a>
-                      </li>
-                    </ul>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/pac.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon4.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Savings</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Tech Savings</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Overstock Savings</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Tech Rollbacks</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/hexagon.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon5.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Cell Phones</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Wireless Deals</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">5G Phones </a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Prepaid Phones & Plans </a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Refurbished Phones</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">iPhone Accessories</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Cases & Screen Protectors</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Unlocked Phones</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sub-menu__column">
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/triangle.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Computers</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop All Computers</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Laptops</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">PC Gaming</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Monitors</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Chromebook</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Printers & Ink</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop all TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Computer Accessories</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Desktops</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Tax Software</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Computer Software</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">PC Finder</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -405,7 +470,7 @@
         </li>
         <li class="nav-bar__item">
           <a href="#!" class="nav-bar__link"
-            >Beauty
+            >Grocery
             <img src="./assets/icons/arrow-down.svg" alt="" class="nav-bar__arrow icon" />
           </a>
           <div class="drop-down js-dropdown">
@@ -413,190 +478,215 @@
               <div class="drop-down__row">
                 <div class="sub-menu sub-menu__not-main">
                   <div class="sub-menu__column">
-                    <img src="./assets/icons/rectangle.svg" alt="" class="drop-down__image-1" />
-                    <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
-                    <h2 class="drop-down__heading">TV & Video</h2>
-                    <ul class="drop-down__list">
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop all TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">TVs by Size</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Smart TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Roku TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Streaming</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">TV Mounts & Accessories</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">DVD & Blu-Ray PlayersBaby</a>
-                      </li>
-                    </ul>
-                    <div class="drop-down__sub-menu">
-                      <img src="./assets/icons/blue-star.svg" alt="" class="drop-down__image-1" />
-                      <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
-                      <h2 class="drop-down__heading">Wearable Technology</h2>
-                      <ul class="drop-down__list">
-                        <li>
-                          <a href="#!" class="drop-down__link">Galaxy Watch</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Apple Watch</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Fitness Trackers</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Virtual Reality</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Headphones</a>
-                        </li>
-                      </ul>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/circle.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon5.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">TV & Video</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop all TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">TVs by Size</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Smart TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Roku TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Streaming</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">TV Mounts & Accessories</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">DVD & Blu-Ray PlayersBaby</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/blue-star.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Wearable Technology</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Galaxy Watch</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Apple Watch</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Fitness Trackers</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Virtual Reality</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Headphones</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div class="sub-menu__column">
-                    <img src="./assets/icons/triangle.svg" alt="" class="drop-down__image-1" />
-                    <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
-                    <h2 class="drop-down__heading">Computers</h2>
-                    <ul class="drop-down__list">
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop All Computers</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Laptops</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">PC Gaming</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Monitors</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Chromebook</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Printers & Ink</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop all TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Computer Accessories</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Desktops</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Tax Software</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Computer Software</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">PC Finder</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="sub-menu__column">
-                    <img src="./assets/icons/pac.svg" alt="" class="drop-down__image-1" />
-                    <img src="./assets/icons/dropdown-icon4.svg" alt="" class="drop-down__image-2" />
-                    <h2 class="drop-down__heading">Savings</h2>
-                    <ul class="drop-down__list">
-                      <li>
-                        <a href="#!" class="drop-down__link">Tech Savings</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Overstock Savings</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Tech Rollbacks</a>
-                      </li>
-                    </ul>
-                    <div class="drop-down__sub-menu">
-                      <img src="./assets/icons/hexagon.svg" alt="" class="drop-down__image-1" />
-                      <img src="./assets/icons/dropdown-icon5.svg" alt="" class="drop-down__image-2" />
-                      <h2 class="drop-down__heading">Cell Phones</h2>
-                      <ul class="drop-down__list">
-                        <li>
-                          <a href="#!" class="drop-down__link">Wireless Deals</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">5G Phones </a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Prepaid Phones & Plans </a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Refurbished Phones</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">iPhone Accessories</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Cases & Screen Protectors</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Unlocked Phones</a>
-                        </li>
-                      </ul>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/hexagon.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Computers</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop All Computers</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Laptops</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">PC Gaming</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Monitors</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Chromebook</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Printers & Ink</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop all TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Computer Accessories</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Desktops</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Tax Software</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Computer Software</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">PC Finder</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div class="sub-menu__column">
-                    <img src="./assets/icons/rectangle.svg" alt="" class="drop-down__image-1" />
-                    <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
-                    <h2 class="drop-down__heading">TV & Video</h2>
-                    <ul class="drop-down__list">
-                      <li>
-                        <a href="#!" class="drop-down__link">Shop all TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">TVs by Size</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Smart TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Roku TVs</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">Streaming</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">TV Mounts & Accessories</a>
-                      </li>
-                      <li>
-                        <a href="#!" class="drop-down__link">DVD & Blu-Ray PlayersBaby</a>
-                      </li>
-                    </ul>
-                    <div class="drop-down__sub-menu">
-                      <img src="./assets/icons/blue-star.svg" alt="" class="drop-down__image-1" />
-                      <img src="./assets/icons/dropdown-icon2.svg" alt="" class="drop-down__image-2" />
-                      <h2 class="drop-down__heading">Wearable Technology</h2>
-                      <ul class="drop-down__list">
-                        <li>
-                          <a href="#!" class="drop-down__link">Galaxy Watch</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Apple Watch</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Fitness Trackers</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Virtual Reality</a>
-                        </li>
-                        <li>
-                          <a href="#!" class="drop-down__link">Headphones</a>
-                        </li>
-                      </ul>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/pac.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon4.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Savings</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Tech Savings</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Overstock Savings</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Tech Rollbacks</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/hexagon.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon5.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Cell Phones</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Wireless Deals</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">5G Phones </a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Prepaid Phones & Plans </a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Refurbished Phones</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">iPhone Accessories</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Cases & Screen Protectors</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Unlocked Phones</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sub-menu__column">
+                    <div class="drop-down__main-menu">
+                      <div class="drop-down__icons">
+                        <img src="./assets/icons/triangle.svg" alt="" class="drop-down__image-1" />
+                        <img src="./assets/icons/dropdown-icon3.svg" alt="" class="drop-down__image-2" />
+                      </div>
+                      <div class="drop-down__content">
+                        <h2 class="drop-down__heading">Computers</h2>
+                        <ul class="drop-down__list">
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop All Computers</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Laptops</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">PC Gaming</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Monitors</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Chromebook</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Printers & Ink</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Shop all TVs</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Computer Accessories</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Desktops</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Tax Software</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">Computer Software</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="drop-down__link">PC Finder</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -606,13 +696,14 @@
         </li>
       </ul>
     </nav>
+    <div class="nav-bar__overlay js-toggle" toggle-target="#nav-bar"></div>
     <div class="actions">
-      <div class="actions__group actions__group--single">
+      <div class="actions__group d-md-none actions__group--single">
         <button class="actions__button">
           <img src="./assets/icons/search.svg" alt="" class="actions__icon icon" />
         </button>
       </div>
-      <div class="actions__group">
+      <div class="actions__group d-md-none">
         <button class="actions__button">
           <img src="./assets/icons/heart.svg" alt="" class="actions__icon icon" />
           <span class="actions__title">03</span>
