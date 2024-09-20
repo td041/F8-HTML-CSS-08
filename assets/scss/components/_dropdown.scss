@@ -8,8 +8,7 @@
   display: none;
   left: 0;
   @include abstracts.breakpoint(lg) {
-    display: block;
-    position: static;
+    position: initial;
     padding-top: 0;
   }
   &__inner {
@@ -31,14 +30,16 @@
       border-radius: 0;
       background: transparent;
       box-shadow: none;
-      padding: 0 40px 0;
+      padding: 0 40px;
       &::before {
         content: none;
       }
     }
+    @include abstracts.breakpoint(sm) {
+      padding: 0 20px;
+    }
   }
   &__row {
-    height: 100%;
     position: relative;
   }
   &__main-menu {
@@ -49,7 +50,6 @@
       margin-top: 23px;
     }
     @include abstracts.breakpoint(lg) {
-      border-right: none;
       height: auto;
       width: 100%;
     }
@@ -58,8 +58,14 @@
     border-right: 1px solid var(--dropdown-menu-border);
     width: var(--main-menu-width);
     overflow-y: auto;
+
     @include abstracts.breakpoint(xl) {
       width: 230px;
+      border-right: none;
+    }
+    @include abstracts.breakpoint(lg) {
+      gap: 0px;
+      width: auto;
     }
   }
   &__heading {
@@ -80,7 +86,7 @@
       display: block;
     }
   }
-  &__image-1 {
+  &__image-ss {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -132,7 +138,6 @@
   inset: 0 0 0 var(--main-menu-width);
   overflow-y: auto;
   padding-left: var(--menu-padding);
-  height: 100%;
   transition: 1s;
   gap: var(--menu-padding);
   &__column {
@@ -146,6 +151,13 @@
     padding-left: 0;
     gap: 50px;
     max-height: calc(min(582px, 100vh) - 30px * 2);
+    @include abstracts.breakpoint(xl) {
+      gap: 50px;
+    }
+    @include abstracts.breakpoint(lg) {
+      max-height: unset;
+      gap: 23px;
+    }
   }
   @include abstracts.breakpoint(xl) {
     left: 240px;
@@ -153,7 +165,6 @@
   @include abstracts.breakpoint(lg) {
     position: static;
     flex-direction: column;
-    display: flex;
     padding-left: 0;
   }
 }

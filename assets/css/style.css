@@ -1438,18 +1438,25 @@ button {
   .nav-bar {
     position: fixed;
     inset: 0 50% 0 0;
-    background-color: #fff;
+    background: var(--side-bar-bg);
     margin-left: 0;
     z-index: 9;
     translate: -100%;
     transition: 0.5s;
+    border-radius: 0 20px 20px 0;
   }
   .nav-bar.show {
     translate: 0;
+    box-shadow: 0px 40px 90px 20px var(--side-bar-shadow);
   }
   .nav-bar.show ~ .nav-bar__overlay {
     visibility: visible;
     opacity: 1;
+  }
+}
+@media (max-width: 575.98px) {
+  .nav-bar {
+    right: 20%;
   }
 }
 .nav-bar__close {
@@ -1460,6 +1467,32 @@ button {
     display: block;
     padding: 10px 40px;
   }
+}
+@media (max-width: 575.98px) {
+  .nav-bar__close {
+    padding: 0 20px 10px;
+  }
+}
+.nav-bar__button {
+  height: 50px;
+  padding: 0 40px;
+  align-items: center;
+}
+@media (max-width: 575.98px) {
+  .nav-bar__button {
+    padding: 0 20px;
+  }
+}
+.nav-bar__title, .nav-bar__quantity {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.nav-bar__title {
+  margin-left: 16px;
+}
+.nav-bar__quantity {
+  margin-left: auto;
 }
 .nav-bar__overlay {
   visibility: hidden;
@@ -1479,22 +1512,29 @@ button {
 }
 @media (max-width: 991.98px) {
   .nav-bar__list {
+    overscroll-behavior: contain;
     flex-direction: column;
-    height: calc(100% - 26px);
+    height: calc(100% - 40px);
     overflow-y: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .nav-bar__list {
+    height: calc(100% - 128px);
   }
 }
 .nav-bar__item:hover .drop-down {
   display: block;
 }
 @media (max-width: 991.98px) {
+  .nav-bar__item {
+    width: 100%;
+  }
   .nav-bar__item:hover .drop-down {
     display: none;
   }
-}
-@media (max-width: 991.98px) {
-  .nav-bar__item {
-    width: 100%;
+  .nav-bar__item--active .drop-down {
+    display: block !important;
   }
 }
 .nav-bar__link {
@@ -1513,9 +1553,24 @@ button {
     justify-content: space-between;
   }
 }
+@media (max-width: 575.98px) {
+  .nav-bar__link {
+    padding: 0 20px;
+    height: 44px;
+  }
+}
 .nav-bar__arrow {
   font-size: 1.5rem;
   font-weight: 500;
+}
+@media (max-width: 991.98px) {
+  .nav-bar__arrow {
+    rotate: -90deg;
+    transition: rotate 0.5s;
+  }
+}
+.nav-bar__item--active .nav-bar__arrow {
+  rotate: 0deg;
 }
 
 .actions {
@@ -1616,8 +1671,7 @@ button {
 }
 @media (max-width: 991.98px) {
   .drop-down {
-    display: block;
-    position: static;
+    position: initial;
     padding-top: 0;
   }
 }
@@ -1642,14 +1696,18 @@ button {
     border-radius: 0;
     background: transparent;
     box-shadow: none;
-    padding: 0 40px 0;
+    padding: 0 40px;
   }
   .drop-down__inner::before {
     content: none;
   }
 }
+@media (max-width: 575.98px) {
+  .drop-down__inner {
+    padding: 0 20px;
+  }
+}
 .drop-down__row {
-  height: 100%;
   position: relative;
 }
 .drop-down__main-menu {
@@ -1662,7 +1720,6 @@ button {
 }
 @media (max-width: 991.98px) {
   .drop-down__main-menu {
-    border-right: none;
     height: auto;
     width: 100%;
   }
@@ -1675,6 +1732,13 @@ button {
 @media (max-width: 1199.98px) {
   .drop-down__main {
     width: 230px;
+    border-right: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .drop-down__main {
+    gap: 0px;
+    width: auto;
   }
 }
 .drop-down__heading {
@@ -1699,7 +1763,7 @@ button {
     display: block;
   }
 }
-.drop-down__image-1 {
+.drop-down__image-ss {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -1748,7 +1812,6 @@ button {
   inset: 0 0 0 var(--main-menu-width);
   overflow-y: auto;
   padding-left: var(--menu-padding);
-  height: 100%;
   transition: 1s;
   gap: var(--menu-padding);
 }
@@ -1765,6 +1828,17 @@ button {
   max-height: calc(min(582px, 100vh) - 60px);
 }
 @media (max-width: 1199.98px) {
+  .sub-menu__not-main {
+    gap: 50px;
+  }
+}
+@media (max-width: 991.98px) {
+  .sub-menu__not-main {
+    max-height: unset;
+    gap: 23px;
+  }
+}
+@media (max-width: 1199.98px) {
   .sub-menu {
     left: 240px;
   }
@@ -1773,7 +1847,6 @@ button {
   .sub-menu {
     position: static;
     flex-direction: column;
-    display: flex;
     padding-left: 0;
   }
 }
@@ -1781,8 +1854,8 @@ button {
 html.dark {
   --text: #fff;
   --font: Gordita, sans-serif;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-    hue-rotate(93deg) brightness(103%) contrast(103%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
   --header-bg-color: #171c28;
   --body-bg: #292e39;
   --actions-group-color: #292e39;
@@ -1790,11 +1863,13 @@ html.dark {
   --actions-line: #ededf6;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow: brightness(0) saturate(100%) invert(15%) sepia(11%)
-    saturate(1427%) hue-rotate(185deg) brightness(91%) contrast(83%);
+  --dropdown-arrow: brightness(0) saturate(100%) invert(15%) sepia(11%) saturate(1427%) hue-rotate(185deg)
+    brightness(91%) contrast(83%);
   --dropdown-menu-border: #171c28;
-  --dropdown-icon-color: brightness(0) saturate(100%) invert(91%) sepia(2%)
-    saturate(209%) hue-rotate(200deg) brightness(108%) contrast(98%);
+  --dropdown-icon-color: brightness(0) saturate(100%) invert(91%) sepia(2%) saturate(209%) hue-rotate(200deg)
+    brightness(108%) contrast(98%);
+  --side-bar-bg: #292e39;
+  --side-bar-shadow: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1805,8 +1880,8 @@ html.dark {
 html {
   --text: #1a162e;
   --font: Gordita, sans-serif;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%)
-    saturate(6945%) hue-rotate(211deg) brightness(101%) contrast(96%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6945%) hue-rotate(211deg) brightness(101%)
+    contrast(96%);
   --header-bg-color: #eee;
   --body-bg: #f6f6f6;
   --actions-group-color: #fff;
@@ -1815,6 +1890,8 @@ html {
   --dropdown-bg-color: #fff;
   --dropdown-shadow: rgba(200, 200, 200, 0.4);
   --dropdown-menu-border: #d2d1d6;
+  --side-bar-bg: #fff;
+  --side-bar-shadow: rgba(200, 200, 200, 0.4);
 }
 @media (max-width: 991.98px) {
   html {

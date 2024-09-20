@@ -9,8 +9,18 @@
     </a>
     <nav id="nav-bar" class="nav-bar show">
       <button class="nav-bar__close js-toggle" toggle-target="#nav-bar">
-        <img src="./assets/icons/arrow-left.svg" alt="" />
+        <img class="icon" src="./assets/icons/arrow-left.svg" alt="" />
       </button>
+      <a href="" class="nav-bar__button d-none d-md-flex">
+        <img src="./assets/icons/buy.svg" alt="" class="nav-bar__icon icon" />
+        <span class="nav-bar__title">Card</span>
+        <span class="nav-bar__quantity">3</span>
+      </a>
+      <a href="" class="nav-bar__button d-none d-md-flex icon">
+        <img src="./assets/icons/heart.svg" alt="" class="nav-bar__icon icon" />
+        <span class="nav-bar__title">Favorite</span>
+        <span class="nav-bar__quantity">3</span>
+      </a>
       <ul class="nav-bar__list js-dropdown-list">
         <li class="nav-bar__item">
           <a href="#!" class="nav-bar__link"
@@ -21,7 +31,7 @@
             <div class="drop-down__inner">
               <div class="drop-down__row">
                 <div class="drop-down__main-menu drop-down__main">
-                  <div class="drop-down__icons">
+                  <div class="drop-down__icons d-lg-none">
                     <img src="./assets/icons/circle.svg" alt="" class="drop-down__image-1 d-lg-none" />
                     <img src="./assets/icons/dropdown-icon1.svg" alt="" class="drop-down__image-2 d-lg-none" />
                   </div>
@@ -470,7 +480,7 @@
         </li>
         <li class="nav-bar__item">
           <a href="#!" class="nav-bar__link"
-            >Grocery
+            >Beauty
             <img src="./assets/icons/arrow-down.svg" alt="" class="nav-bar__arrow icon" />
           </a>
           <div class="drop-down js-dropdown">
