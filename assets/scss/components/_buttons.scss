@@ -1,0 +1,38 @@
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  //styleName: Bold 14;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  background-color: var(--filter-button-bg);
+  color: var(--filter-button-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  &__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+}
+.like-button {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 20px 60px 6px #7c7c7c33;
+  bottom: 0;
+  right: 0;
+  background-color: var(--like-button__bg);
+  &__icon {
+    width: 19px;
+    height: 19px;
+    object-fit: cover;
+  }
+  &__icon-liked {
+  }
+}

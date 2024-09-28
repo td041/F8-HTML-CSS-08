@@ -7,7 +7,7 @@
   width: min(1240px, 100%);
   display: none;
   left: 0;
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     position: initial;
     padding-top: 0;
   }
@@ -26,7 +26,7 @@
       transform: translateX(-50%);
       filter: var(--dropdown-arrow);
     }
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       border-radius: 0;
       background: transparent;
       box-shadow: none;
@@ -35,7 +35,7 @@
         content: none;
       }
     }
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.screen(sm) {
       padding: 0 20px;
     }
   }
@@ -49,7 +49,7 @@
     + .drop-down__main-menu {
       margin-top: 23px;
     }
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       height: auto;
       width: 100%;
     }
@@ -59,11 +59,11 @@
     width: var(--main-menu-width);
     overflow-y: auto;
 
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.screen(xl) {
       width: 230px;
       border-right: none;
     }
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       gap: 0px;
       width: auto;
     }
@@ -79,10 +79,10 @@
     width: 36px;
     height: 36px;
     position: relative;
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.screen(xl) {
       display: none;
     }
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       display: block;
     }
   }
@@ -151,18 +151,18 @@
     padding-left: 0;
     gap: 50px;
     max-height: calc(min(582px, 100vh) - 30px * 2);
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.screen(xl) {
       gap: 50px;
     }
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       max-height: unset;
       gap: 23px;
     }
   }
-  @include abstracts.breakpoint(xl) {
+  @include abstracts.screen(xl) {
     left: 240px;
   }
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     position: static;
     flex-direction: column;
     padding-left: 0;

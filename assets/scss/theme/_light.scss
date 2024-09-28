@@ -9,7 +9,7 @@ html {
   --actions-group-color: #fff;
   --actions-group-shadow: rgba(237, 237, 246, 0.2);
   --actions-line: #ededf6;
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow: rgba(237, 237, 246, 0.2);
   }
@@ -20,4 +20,22 @@ html {
   // Side-bar
   --side-bar-bg: #fff;
   --side-bar-shadow: rgba(200, 200, 200, 0.4);
+  // Category item
+  --cate-item-bg: #eeeeee;
+  --cate-item-thumb: #fff;
+  --cate-title-color: #000;
+  @include abstracts.screen(md) {
+    --cate-item-bg: #fff;
+  }
+  // Filter button
+  --filter-button-color: #6c6c72;
+  --filter-button-bg: #fff;
+  // Product-card
+  --product-text: #1a162e;
+  --product-brand: #9e9da8;
+  --product-card-bg: #ffffff;
+  --product-card-shadow: box-shadow: #ededf633;
+  // Like-button
+  --like-button__bg: #fff;
+  --like-button__shadow: #7c7c7c33;
 }

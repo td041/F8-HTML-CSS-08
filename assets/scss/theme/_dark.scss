@@ -9,7 +9,7 @@ html.dark {
   --actions-group-color: #292e39;
   --actions-group-shadow: rgba(0, 0, 0, 0.2);
   --actions-line: #ededf6;
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     --header-shadow: rgba(0, 0, 0, 0.2);
   }
   // Drop-down
@@ -23,4 +23,17 @@ html.dark {
   // Side-bar
   --side-bar-bg: #292e39;
   --side-bar-shadow: rgba(23, 28, 40, 0.4);
+  // Category item
+  --cate-item-bg: #171c28;
+  --cate-item-thumb: #292e39;
+  --cate-title-color: #fff;
+  // Filter button
+  --filter-button-color: #fff;
+  --filter-button-bg: #171c28;
+  --product-text: #FFFFFF;
+  --product-brand: #9e9da8;
+  --product-card-bg: #171c28;
+  --product-card-shadow: box-shadow: #00000033;
+  // Like-button
+  --like-button__bg: #292E39;
 }
