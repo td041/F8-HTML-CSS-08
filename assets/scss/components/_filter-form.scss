@@ -1,0 +1,253 @@
+@use "../abstracts";
+.filter-wrap {
+  position: relative;
+  z-index: 1;
+}
+.filter {
+  position: absolute;
+  right: 0px;
+  top: 57px;
+  border-radius: 20px;
+  padding: 30px 0;
+  background: var(--filter-form-bg);
+  filter: drop-shadow(0px 40px 90px 20px var(--filter-form-shadow));
+  transition: opacity, visibility;
+  transition-duration: 0.2s;
+  @include abstracts.screen(sm) {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    border-radius: 0;
+  }
+  &__content {
+    padding: 0 30px;
+    max-height: calc(100vh - 350px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    @include abstracts.screen(xl) {
+      flex-direction: column;
+    }
+    @include abstracts.screen(sm) {
+      max-height: calc(100vh - 230px);
+      padding-bottom: 60px;
+    }
+  }
+  &__heading,
+  &__content,
+  &__footer {
+    padding: 0 30px;
+  }
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__arrow {
+    height: 20.5px;
+    position: absolute;
+    top: -15px;
+    right: 24px;
+    filter: var(--filter-arrow-color);
+  }
+  &__heading {
+    //styleName: Medium 22;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  &__form {
+    margin-top: 30px;
+    &-label {
+      //styleName: Medium 22;
+      display: block;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 32px;
+      &--small {
+        //styleName: Medium 14;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+    }
+    &-group {
+      margin-top: 20px;
+      &--inline {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+      }
+      &--border {
+        border: 1px solid #d2d1d6;
+        border-radius: 6px;
+      }
+    }
+    &-slider {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background: #d2d1d6;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 6px solid #ffb700;
+        background: var(--filter-form-bg);
+      }
+      &::before {
+        left: var(--min-value);
+      }
+      &::after {
+        left: var(--max-value);
+      }
+    }
+    &-input,
+    &-select-wrap {
+      border: 1px solid #d2d1d6;
+      border-radius: 6px;
+    }
+    &-text-input {
+      display: flex;
+      align-items: center;
+      width: 334px;
+      height: 44px;
+      overflow: hidden;
+      @include abstracts.screen(sm) {
+        width: 100%;
+      }
+      &--small {
+        width: 121px;
+        height: 36px;
+        @include abstracts.screen(xl) {
+          width: 100%;
+        }
+      }
+      &--border {
+        padding: 0 16px;
+        justify-content: space-between;
+      }
+    }
+    &-text-input--small &-input {
+      font-size: 14px;
+    }
+    &-input {
+      padding: 0 12px;
+      height: 100%;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 20px;
+      width: 100%;
+      &::placeholder {
+        font-weight: 400;
+      }
+      &--no-line {
+        border: none;
+      }
+      @include abstracts.screen(sm) {
+        font-size: 16px !important; 
+      }
+    }
+    &-input-icon {
+      margin-left: 12px;
+      cursor: pointer;
+    }
+    &-select-wrap {
+      height: 45px;
+      display: flex;
+      align-items: center;
+    }
+    &-select {
+      padding: 0 14px;
+      display: flex;
+      align-items: center;
+      height: calc(100% - 10px);
+      //styleName: Medium 14;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      min-width: var(--width, 108px);
+      justify-content: space-between;
+      cursor: pointer;
+      @include abstracts.screen(xl) {
+        flex: 1;
+      }
+    }
+    &-select-arrow {
+      width: 24px;
+    }
+    &-select + &-select {
+      border-left: 1px solid #d2d1d6;
+    }
+    &-tags {
+      display: flex;
+      gap: 10px 20px;
+      flex-wrap: wrap;
+      @include abstracts.screen(sm) {
+        gap: 10px;
+      }
+    }
+    &-tag {
+      border-radius: 6px;
+      background: var(--filter-form-tag-bg);
+      //styleName: Medium 14;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #9e9da8;
+      padding: 6px 12px;
+      transition: color 0.25s;
+      &:hover {
+        color: var(--text-color-2);
+      }
+    }
+  }
+  &__footer {
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-end;
+    @include abstracts.screen(xl) {
+      background: var(--filter-form-bg);
+      position: sticky;
+      bottom: 0;
+      padding-bottom: 30px;
+    }
+    @include abstracts.screen(sm) {
+      bottom: 30px;
+      background-color: var(--filter-form-bg);
+    }
+  }
+  &__row {
+    display: flex;
+    flex: 1;
+  }
+  &__separate {
+    width: 1px;
+    margin: 0 30px;
+    background: #eee;
+    @include abstracts.screen(xl) {
+      width: 100%;
+      height: 1px;
+      margin: 30px 0;
+    }
+  }
+  &__cancel,
+  &__submit {
+    height: 38px;
+    padding: 0 10px;
+    @include abstracts.screen(sm) {
+      flex: 1;
+      height: 42px;
+    }
+  }
+  &__cancel {
+    font-size: 1.5rem;
+  }
+  &__submit {
+    font-size: 1.4rem;
+  }
+}

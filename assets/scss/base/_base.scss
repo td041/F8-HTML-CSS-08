@@ -1,3 +1,4 @@
+@use "../abstracts";
 *,
 ::after,
 ::before {
@@ -24,9 +25,14 @@ button,
 input,
 textarea,
 select {
+  outline: none;
+  border: none;
   font-family: inherit;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
+}
+input{
+  background: transparent;
 }
 a {
   text-decoration: none;
@@ -41,4 +47,9 @@ button {
 }
 .icon {
   filter: var(--icon-color);
+}
+.container {
+  @include abstracts.screen(sm) {
+    padding: 0 20px !important;
+  }
 }

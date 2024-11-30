@@ -13,6 +13,7 @@
   }
   &__inner {
     position: relative;
+    z-index: 50;
     padding: 30px 62px 30px 30px;
     border-radius: 20px;
     background: var(--dropdown-bg-color);

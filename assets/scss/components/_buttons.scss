@@ -36,3 +36,36 @@
   &__icon-liked {
   }
 }
+.button {
+  background-color: #f8bb3c;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 18px;
+  + .button {
+    margin-left: 20px;
+  }
+  &--text{
+    color: #9e9da8;
+    background: transparent;
+    font-weight: 400;
+  }
+  &--outline{
+    background-color: transparent;
+    border: 1px solid #d2d1d6;
+  }
+  &--primary{
+    color: #171c28;
+    background-color: #ffb700;
+  }
+  &--rounded{
+    border-radius: 99px;
+  }
+  &--disabled{
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &:hover{
+    opacity: 0.9;
+  }
+}
