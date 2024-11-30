@@ -2230,6 +2230,9 @@ button {
   object-fit: cover;
 }
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f8bb3c;
   border-radius: 6px;
   padding: 8px 12px;
