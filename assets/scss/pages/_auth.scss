@@ -1,0 +1,76 @@
+.auth {
+  min-height: 100vh;
+  display: flex;
+  &__intro,
+  &__content {
+    flex: 1;
+  }
+  &__intro {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    &-text {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.6rem;
+      max-width: 412px;
+      text-align: center;
+    }
+  }
+  &__content {
+    background: var(--auth-content-bg);
+    padding: 50px 0;
+    &-inner {
+      width: min(460px, 100%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__heading {
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+  &__desc {
+    color: #9e9da8;
+    line-height: 2.2rem;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0 30px;
+  }
+  &__form {
+    width: 100%;
+    margin-top: 30px;
+  }
+  &__link {
+    color: #0071dc;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 2.2rem;
+  }
+  &__button-group {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+  &__button {
+    width: 100%;
+  }
+  &__text{
+    margin-top: 108px;
+    color: #9e9da8;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+  }
+}
