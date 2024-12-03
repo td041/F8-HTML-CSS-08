@@ -1599,6 +1599,11 @@ button {
   .actions {
     margin-left: 0;
   }
+  .actions__signup {
+    height: 40px !important;
+    padding: 0 8px !important;
+    font-size: 1.5rem !important;
+  }
 }
 .actions__icon {
   display: flex;
@@ -2236,9 +2241,9 @@ button {
   gap: 10px;
   background-color: #f8bb3c;
   border-radius: 6px;
-  padding: 8px 12px;
+  padding: 12px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
 }
 .button + .button:not(.button--no-margin) {
   margin-left: 20px;
@@ -2763,6 +2768,7 @@ html {
 }
 .auth__intro, .auth__content {
   flex: 1;
+  padding: 0 30px;
 }
 .auth__intro {
   text-align: center;
@@ -2771,6 +2777,21 @@ html {
   justify-content: center;
   flex-direction: column;
   gap: 50px;
+  position: relative;
+}
+.auth__intro-logo, .auth__intro-next {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+.auth__intro-logo {
+  top: 80px;
+}
+.auth__intro-next {
+  bottom: 80px;
+}
+.auth__intro-img {
+  max-width: 100%;
 }
 .auth__intro-text {
   font-size: 1.8rem;
@@ -2781,9 +2802,21 @@ html {
 }
 .auth__content {
   background: var(--auth-content-bg);
-  padding: 50px 0;
+}
+@media (max-width: 767.98px) {
+  .auth__content {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    transition: translate 0.3s;
+    overflow-y: auto;
+  }
+  .auth__content.hide {
+    translate: 100%;
+  }
 }
 .auth__content-inner {
+  padding: 50px 0;
   width: min(460px, 100%);
   margin: 0 auto;
   display: flex;

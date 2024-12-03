@@ -30,11 +30,19 @@
     <main class="auth">
       <!-- Auth intro -->
       <div class="auth__intro">
+        <!-- Logo -->
+        <a href="#!" class="logo auth__intro-logo d-none d-md-flex">
+          <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+          <h1 class="logo__title">grocerymart</h1>
+        </a>
         <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img" />
         <p class="auth__intro-text">The best of luxury brand values, high quality products, and innovatie services</p>
+        <button class="auth__intro-next d-none d-md-flex js-toggle" toggle-target="#auth-content">
+          <img src="./assets/img/auth/‌intro-arrow.svg" alt="" />
+        </button>
       </div>
       <!-- Auth content -->
-      <div class="auth__content">
+      <div id="auth-content" class="auth__content hide">
         <div class="auth__content-inner">
           <!-- Logo -->
           <a href="#!" class="logo">
@@ -43,7 +51,7 @@
           </a>
           <h1 class="auth__heading">Sign Up</h1>
           <p class="auth__desc">Let's create your account and Shop like a pro and save money.</p>
-          <form action="" class="form auth__form">
+          <form action="./index-logined.html" class="form auth__form">
             <div class="form__group">
               <div class="form__text-input">
                 <input type="email" name="" id="" class="form__input" placeholder="Email" />
@@ -77,11 +85,15 @@
               </button>
             </div>
           </form>
-          <p class="auth__text">You have an account yet?
+          <p class="auth__text">
+            You have an account yet?
             <a href="./sign-in.html" class="auth__link">Sign In</a>
-          </p>  
+          </p>
         </div>
       </div>
     </main>
+    <script>
+      window.dispatchEvent(new Event("template-loaded"));
+    </script>
   </body>
 </html>

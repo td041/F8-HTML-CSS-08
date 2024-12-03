@@ -162,7 +162,7 @@ function initJsToggle() {
       const isHidden = $(target).classList.contains("hide");
 
       requestAnimationFrame(() => {
-        $(target).classList.toggle("hide", !isHidden);x
+        $(target).classList.toggle("hide", !isHidden);
         $(target).classList.toggle("show", isHidden);
       });
     };
