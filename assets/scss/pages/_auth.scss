@@ -84,7 +84,7 @@
     color: #0071dc;
     font-weight: 500;
     font-size: 15px;
-    line-height: 2.2rem;
+    line-height: 146.667%;
   }
   &__button-group {
     margin-top: 50px;
@@ -93,6 +93,7 @@
     flex-direction: column;
   }
   &__button {
+    font-size: 18px;
     width: 100%;
   }
   &__text {

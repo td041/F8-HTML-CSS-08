@@ -1413,6 +1413,20 @@ button {
     display: grid !important;
   }
 }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 .actions__button, .actions__group, .actions, .nav-bar__link, .bar {
   display: flex;
   align-items: center;
@@ -2595,12 +2609,42 @@ button {
   font-size: 1.4rem;
 }
 
+.form:has(:invalid) .form__submit-button {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .form__group {
   margin-top: 30px;
 }
 .form__group-inline {
   display: flex;
   align-items: center;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error,
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon-error {
+  display: block;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
+.form__input-icon-error {
+  display: none;
+  width: 18px;
+  height: 20px;
+  margin-left: 12px;
+  animation: shake 0.8s;
+}
+.form__error {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: red;
+  display: none;
 }
 .form__text-input {
   border-radius: 10px;
@@ -2632,13 +2676,40 @@ button {
 .form__checkbox {
   display: flex;
   align-items: center;
+  position: relative;
   gap: 10px;
+  user-select: none;
 }
 .form__checkbox-label {
+  margin-left: 29px;
+  margin-right: auto;
   color: #9e9da8;
   font-size: 15px;
   font-weight: 500;
-  line-height: 2.2rem;
+  line-height: 146.667%;
+}
+.form__checkbox::before, .form__checkbox::after {
+  content: "";
+  position: absolute;
+}
+.form__checkbox::before {
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
+  border: 1.5px solid #9e9da8;
+}
+.form__checkbox:has(:checked)::before {
+  border-color: #ffb700;
+  background: #ffb700;
+}
+.form__checkbox:has(:checked)::after {
+  width: 15px;
+  height: 8px;
+  rotate: -45deg;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  left: 2px;
+  top: 4px;
 }
 
 html.dark {
@@ -2847,7 +2918,7 @@ html {
   color: #0071dc;
   font-weight: 500;
   font-size: 15px;
-  line-height: 2.2rem;
+  line-height: 146.667%;
 }
 .auth__button-group {
   margin-top: 50px;
@@ -2856,6 +2927,7 @@ html {
   flex-direction: column;
 }
 .auth__button {
+  font-size: 18px;
   width: 100%;
 }
 .auth__text {

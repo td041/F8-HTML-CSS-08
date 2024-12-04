@@ -54,34 +54,56 @@
           <form action="./index-logined.html" class="form auth__form">
             <div class="form__group">
               <div class="form__text-input">
-                <input type="email" name="" id="" class="form__input" placeholder="Email" />
+                <input type="email" name="" id="" class="form__input" placeholder="Email" required />
                 <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
               </div>
+              <p class="form__error">Email chưa đúng định dạng</p>
             </div>
             <div class="form__group">
               <div class="form__text-input">
-                <input type="password" name="" id="" class="form__input" placeholder="Password" />
+                <input
+                  type="password"
+                  name=""
+                  id=""
+                  class="form__input"
+                  placeholder="Password"
+                  required
+                  minlength="6"
+                />
                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
               </div>
+              <p class="form__error">Mật khẩu ít nhất 6 kí tự</p>
             </div>
             <div class="form__group">
               <div class="form__text-input">
-                <input type="password" name="" id="" class="form__input" placeholder="Confirm password" />
+                <input
+                  type="password"
+                  name=""
+                  id=""
+                  class="form__input"
+                  placeholder="Confirm password"
+                  required
+                  minlength="6"
+                />
                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
               </div>
+              <p class="form__error">Xác nhận mật khẩu</p>
             </div>
             <div class="form__group form__group-inline">
               <label class="form__checkbox">
-                <input type="checkbox" class="form__checkbox-input" />
+                <input type="checkbox" class="form__checkbox-input d-none" checked />
                 <span class="form__checkbox-label">Set as default card</span>
               </label>
               <a href="#!" class="auth__link form__pull-right">Recovery Password</a>
             </div>
             <div class="form__group auth__button-group">
-              <button class="button button--primary auth__button">Sign Up</button>
+              <button class="button button--primary auth__button form__submit-button">Sign Up</button>
               <button class="button button--outline auth__button button--no-margin">
                 <img src="./assets/icons/google.svg" alt="" class="button-icon" />
-                Sign in with Gmail
+                Sign in with Google
               </button>
             </div>
           </form>
