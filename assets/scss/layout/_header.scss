@@ -20,6 +20,25 @@
     justify-content: space-between;
     padding: 16px 0;
   }
+  &__logo {
+    @include abstracts.screen(lg) {
+      margin-left: 39px;
+      column-gap: 10px !important;
+      &-title {
+        font-size: 1.8rem !important;
+      }
+      &-img {
+        width: 24px;
+      }
+    }
+    @include abstracts.screen(md) {
+      margin-left: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: 50% 50%;
+    }
+  }
 }
 .nav-bar {
   margin-left: 129px;
@@ -154,7 +173,7 @@
   gap: 20px;
   @include abstracts.screen(md) {
     margin-left: 0;
-    &__signup{
+    &__signup {
       height: 40px !important;
       padding: 0 8px !important;
       font-size: 1.5rem !important;
