@@ -11,6 +11,9 @@ $error-color: #ed4337;
       display: flex;
       align-items: center;
     }
+    @include abstracts.screen(md) {
+      margin-top: 20px;
+    }
   }
   &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
     .form__text-input {
@@ -61,7 +64,7 @@ $error-color: #ed4337;
     font-weight: 500;
     line-height: 144.444%;
     &::placeholder {
-      color: #d2d1d6;
+      color: var(--form-placeholder-color);
     }
     &-icon {
       // Margin-left vào icon để tránh tình trạng nhập đầy input

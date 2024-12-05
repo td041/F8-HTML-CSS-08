@@ -18,6 +18,7 @@
     flex-direction: column;
     gap: 50px;
     position: relative;
+    background: var(---auth-intro-bg);
     &-logo,
     &-next {
       position: absolute;
@@ -40,6 +41,7 @@
       line-height: 2.6rem;
       max-width: 412px;
       text-align: center;
+      color: var(--auth-intro-text-color);
       @include abstracts.screen(md) {
         font-size: 1.5rem;
       }
@@ -66,6 +68,9 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
+      @include abstracts.screen(md) {
+        padding: 32px 0;
+      }
     }
   }
   &__heading {
@@ -73,7 +78,9 @@
     font-size: 3rem;
     font-weight: 500;
     line-height: 146.667%;
+    color: var(--auth-heading-color);
     @include abstracts.screen(md) {
+      margin-top: 40px;
       font-size: 2.2rem;
     }
   }
@@ -83,7 +90,7 @@
     margin-top: 10px;
     font-weight: 500;
     font-size: 15px;
-    padding: 0 30px;
+    padding: 0 20px;
     @include abstracts.screen(md) {
       font-size: 1.4rem;
     }
@@ -109,6 +116,10 @@
     display: flex;
     gap: 30px;
     flex-direction: column;
+    @include abstracts.screen(md) {
+      margin-top: 40px;
+      gap: 20px;
+    }
   }
   &__button {
     font-size: 18px;
@@ -121,6 +132,7 @@
     font-weight: 400;
     line-height: 2.6rem;
     @include abstracts.screen(md) {
+      margin-top: 40px;
       font-size: 1.6rem;
     }
     &-link {
