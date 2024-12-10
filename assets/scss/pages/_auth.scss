@@ -5,6 +5,9 @@
   @supports (-webkit-touch-callout: none) {
     min-height: -webkit-fill-available;
   }
+  &__messange {
+    margin-top: 30px;
+  }
   &__intro,
   &__content {
     flex: 1;
@@ -33,7 +36,7 @@
     }
     &-img {
       // Max-width để ảnh có thể tương thích với kích thước
-      max-width: 100%;
+      width: min(424px, 100%);
     }
     &-text {
       font-size: 1.8rem;
@@ -100,6 +103,9 @@
     margin-top: 30px;
     @include abstracts.screen(md) {
       margin-top: 0;
+    }
+    &-forgot {
+      margin-top: 10px;
     }
   }
   &__link {

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Mart</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header" class="header"></header>
+    <script>
+      load("#header", "./templates/header-logined.html");
+    </script>
+    <!-- Main -->
+    <main class="product-page">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <div class="product-container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link"
+                >Departments
+                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link"
+                >Coffee
+                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link"
+                >Coffee Beans
+                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">LavAzza</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Product-info -->
+        <div class="product-container">
+          <div class="row">
+            <div class="col-5">
+              <div class="product-preview">
+                <div class="product-preview__list">
+                  <div class="product-preview__item">
+                    <img src="./assets/img/category/product-1.png" alt="" class="product-preview__img"/>
+                  </div>
+                  <div class="product-preview__item">
+                    <img src="./assets/img/category/product-2.png" alt="" class="product-preview__img"/>
+                  </div>
+                  <div class="product-preview__item">
+                    <img src="./assets/img/category/product-3.png" alt="" class="product-preview__img"/>
+                  </div>
+                  <div class="product-preview__item">
+                    <img src="./assets/img/category/product-4.png" alt="" class="product-preview__img"/>
+                  </div>
+                </div>
+                <div class="product-preview__thumbs">
+                  <img src="./assets/img/category/product-1.png" alt="" class="product-preview__thumb-img product-preview__thumb-img--current"/>
+                  <img src="./assets/img/category/product-2.png" alt="" class="product-preview__thumb-img"/>
+                  <img src="./assets/img/category/product-3.png" alt="" class="product-preview__thumb-img"/>
+                  <img src="./assets/img/category/product-4.png" alt="" class="product-preview__thumb-img"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-7"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer" id="footer"></footer>
+    <script>
+      load("#footer", "./templates/footer.html");
+    </script>
+  </body>
+</html>
