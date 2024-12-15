@@ -41,7 +41,7 @@ html.dark {
     // Filter-form
     --filter-form-bg: #2f3441;
     --filter-form-shadow: rgba(0,0,0,0.4);
-    --filter-form-tag-bg: #171c28;
+    --form-tag-bg: #171c28;
     --filter-arrow-color: var(--dropdown-arrow);
   // Auth
   --auth-content-bg: #292E39;
@@ -53,7 +53,20 @@ html.dark {
 
   // Product detail
   --product-detail-bg: #292e39;
+  --product-detail-info-bg: #171c28;
+  --product-detail-content-bg: transparent;
+  --product-detail-tag-bg: #292e39;
+  @include abstracts.screen(md) {
+    --product-detail-bg: #292e39;
+    --product-detail-info-bg: transparent;
+    --product-detail-content-bg: #171c28;
+  }
   // Breadcrumbs
   --breadcrumbs-bg: #171c28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+  @include abstracts.screen(md) {
+    --breadcrumbs-bg: #171c28;
+  }
+  // Search-bar
+  --search-bar-bg: #171c28;
 }

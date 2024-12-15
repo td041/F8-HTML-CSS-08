@@ -3,7 +3,6 @@
   padding: 50px 0;
   font-size: 14px;
   background-color: var(--footer-bg-color);
-  margin-top: 50px;
   &__logo.logo {
     @include abstracts.screen(lg) {
       margin-left: 0;

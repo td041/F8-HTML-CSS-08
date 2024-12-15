@@ -53,7 +53,7 @@ $error-color: #ed4337;
     &:focus-within {
       border-color: #77dae6;
     }
-    @include abstracts.screen(md){
+    @include abstracts.screen(md) {
       height: 48px;
     }
   }
@@ -70,7 +70,7 @@ $error-color: #ed4337;
       // Margin-left vào icon để tránh tình trạng nhập đầy input
       margin-left: 12px;
     }
-    @include abstracts.screen(md){
+    @include abstracts.screen(md) {
       font-size: 1.6rem;
     }
   }
@@ -91,7 +91,7 @@ $error-color: #ed4337;
       font-size: 15px;
       font-weight: 500;
       line-height: 146.667%;
-      @include abstracts.screen(md){
+      @include abstracts.screen(md) {
         font-size: 1.4rem;
       }
     }
@@ -120,6 +120,70 @@ $error-color: #ed4337;
       border-color: transparent transparent #fff #fff;
       left: 2px;
       top: 4px;
+    }
+  }
+  &__select-wrap {
+    border: 1px solid #d2d1d6;
+    border-radius: 6px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
+  &__select {
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    height: calc(100% - 10px);
+    //styleName: Medium 14;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    min-width: var(--width, 114px);
+    justify-content: space-between;
+    cursor: pointer;
+    @include abstracts.screen(xl) {
+      flex: 1;
+    }
+  }
+  &__select-arrow {
+    width: 24px;
+  }
+  &__select + &__select {
+    border-left: 1px solid #d2d1d6;
+  }
+  &__label {
+    //styleName: Medium 22;
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    &--small {
+      //styleName: Medium 14;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  &__tags {
+    display: flex;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+    @include abstracts.screen(sm) {
+      gap: 10px;
+    }
+  }
+  &__tag {
+    border-radius: 6px;
+    background: var(--form-tag-bg);
+    //styleName: Medium 14;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #9e9da8;
+    padding: 6px 12px;
+    transition: color 0.25s;
+    &:hover {
+      color: var(--text-color-2);
     }
   }
 }

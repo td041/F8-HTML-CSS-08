@@ -108,21 +108,21 @@
             <div class="filter hide" id="home-filter">
               <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
               <h3 class="filter__heading">Filter</h3>
-              <form action="" class="filter__form">
+              <form action="" class="filter__form form">
                 <div class="filter__row filter__content">
                   <div class="filter__col">
-                    <label for="" class="filter__form-label">Price</label>
+                    <label for="" class="form__label">Price</label>
                     <div class="filter__form-group">
                       <div class="filter__form-slider" style="--min-value: 10%; --max-value: 60%"></div>
                       <div class="filter__form-group filter__form-group--inline">
                         <div class="">
-                          <label for="" class="filter__form-label filter__form-label--small">Minimum</label>
+                          <label for="" class="form__label form__label--small">Minimum</label>
                           <div class="filter__form-text-input filter__form-text-input--small">
                             <input type="text" name="" id="" class="filter__form-input" value="$30.00" />
                           </div>
                         </div>
                         <div class="">
-                          <label for="" class="filter__form-label filter__form-label--small">Maximum</label>
+                          <label for="" class="form__label form__label--small">Maximum</label>
                           <div class="filter__form-text-input filter__form-text-input--small">
                             <input type="text" name="" id="" class="filter__form-input" value="$100.00" />
                           </div>
@@ -132,30 +132,30 @@
                   </div>
                   <div class="filter__separate"></div>
                   <div class="filter__col">
-                    <label for="" class="filter__form-label">Size/Weight</label>
+                    <label for="" class="form__label">Size/Weight</label>
                     <div class="filter__form-group">
-                      <div class="filter__form-select-wrap">
-                        <div class="filter__form-select" style="--width: 158px">
+                      <div class="form__select-wrap">
+                        <div class="form__select" style="--width: 158px">
                           500g
-                          <img src="./assets/icons/select-arrow.svg" alt="" class="filter__form-select-arrow icon" />
+                          <img src="./assets/icons/select-arrow.svg" alt="" class="form__select-arrow icon" />
                         </div>
-                        <div class="filter__form-select">
+                        <div class="form__select">
                           Gram
-                          <img src="./assets/icons/select-arrow.svg" alt="" class="filter__form-select-arrow icon" />
+                          <img src="./assets/icons/select-arrow.svg" alt="" class="form__select-arrow icon" />
                         </div>
                       </div>
                     </div>
                     <div class="filter__form-group">
-                      <div class="filter__form-tags">
-                        <button class="filter__form-tag">Small</button>
-                        <button class="filter__form-tag">Medium</button>
-                        <button class="filter__form-tag">Large</button>
+                      <div class="form__tags">
+                        <button class="form__tag">Small</button>
+                        <button class="form__tag">Medium</button>
+                        <button class="form__tag">Large</button>
                       </div>
                     </div>
                   </div>
                   <div class="filter__separate"></div>
                   <div class="filter__col">
-                    <label for="" class="filter__form-label">Brand</label>
+                    <label for="" class="form__label">Brand</label>
                     <div class="filter__form-group--border filter__form-group">
                       <div class="filter__form-text-input filter__form-text-input--border">
                         <input
@@ -169,10 +169,10 @@
                       </div>
                     </div>
                     <div class="filter__form-group">
-                      <div class="filter__form-tags">
-                        <button class="filter__form-tag">Lavazza</button>
-                        <button class="filter__form-tag">Nescafe</button>
-                        <button class="filter__form-tag">Starbucks</button>
+                      <div class="form__tags">
+                        <button class="form__tag">Lavazza</button>
+                        <button class="form__tag">Nescafe</button>
+                        <button class="form__tag">Starbucks</button>
                       </div>
                     </div>
                   </div>
@@ -196,8 +196,12 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-1.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
-                  <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                <button class="like-button product-card__like-button">
+                  <img
+                    src="./assets/img/category/heart.svg"
+                    alt=""
+                    class="like-button__icon icon product-card__like-button"
+                  />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -221,8 +225,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-2.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
+                <button class="like-button product-card__like-button">
                   <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -246,12 +251,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-3.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
-                  <img
-                    src="./assets/img/category/heart.svg"
-                    alt=""
-                    class="like-button__icon like-button__icon-liked icon"
-                  />
+                <button class="like-button product-card__like-button">
+                  <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -275,8 +277,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-4.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
+                <button class="like-button product-card__like-button">
                   <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -300,8 +303,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-1.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
+                <button class="like-button product-card__like-button">
                   <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -325,8 +329,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-2.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
+                <button class="like-button product-card__like-button">
                   <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -350,12 +355,8 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-3.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
-                  <img
-                    src="./assets/img/category/heart.svg"
-                    alt=""
-                    class="like-button__icon like-button__icon-liked icon"
-                  />
+                <button class="like-button product-card__like-button">
+                  <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon like-button__icon- icon" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -379,8 +380,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-4.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
+                <button class="like-button product-card__like-button">
                   <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -404,12 +406,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-3.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
-                  <img
-                    src="./assets/img/category/heart.svg"
-                    alt=""
-                    class="like-button__icon like-button__icon-liked icon"
-                  />
+                <button class="like-button product-card__like-button">
+                  <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -433,8 +432,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-4.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
+                <button class="like-button like-button--liked product-card__like-button">
                   <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -458,8 +458,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-1.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
+                <button class="like-button product-card__like-button">
                   <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
@@ -483,8 +484,9 @@
                 <a href="./product-detail.html" class=""
                   ><img src="./assets/img/category/product-2.png" alt="" class="product-card__img"
                 /></a>
-                <button class="like-button">
+                <button class="like-button product-card__like-button">
                   <img src="./assets/img/category/heart.svg" alt="" class="like-button__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-button__icon--liked" />
                 </button>
               </div>
               <section class="cate-item__info">
