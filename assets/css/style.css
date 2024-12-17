@@ -2219,6 +2219,7 @@ strong {
 .cate-item__info {
   padding-right: 30px;
   display: flex;
+  height: 100%;
   flex-direction: column;
 }
 @media (max-width: 1399.98px) {
@@ -2338,8 +2339,10 @@ strong {
   line-height: 22px;
   color: var(--product-brand);
 }
-.product-card__row {
+.product-card__line {
   margin-top: auto;
+}
+.product-card__row {
   align-items: center;
   display: flex;
   justify-content: space-between;

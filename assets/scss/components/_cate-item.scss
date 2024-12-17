@@ -55,6 +55,7 @@
   &__info {
     padding-right: 30px;
     display: flex;
+    height: 100%;
     flex-direction: column;
     @include abstracts.screen(xxl) {
       padding-right: 0;

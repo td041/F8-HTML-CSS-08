@@ -31,8 +31,10 @@
     line-height: 22px;
     color: var(--product-brand);
   }
-  &__row {
+  &__line{
     margin-top: auto;
+  }
+  &__row {
     align-items: center;
     display: flex;
     justify-content: space-between;
