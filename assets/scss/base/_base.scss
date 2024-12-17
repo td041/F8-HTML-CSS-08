@@ -4,6 +4,9 @@
 ::before {
   box-sizing: border-box;
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 :root {
   --text: #1a162e;
   --font: Gordita, sans-serif;
@@ -30,9 +33,8 @@ select {
   border: none;
   font-family: inherit;
   color: inherit;
-  -webkit-tap-highlight-color: transparent;
 }
-input{
+input {
   background: transparent;
 }
 a {
@@ -53,4 +55,12 @@ button {
   @include abstracts.screen(sm) {
     padding: 0 20px !important;
   }
+}
+i,
+em {
+  font-style: italic;
+}
+b,
+strong {
+  font-weight: 600;
 }

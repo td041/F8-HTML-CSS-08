@@ -68,4 +68,11 @@ html {
   }
   // Search-bar
   --search-bar-bg: #fff;
+  // Review-card
+  --review-card-bg: #fafafd;
+  @include abstracts.screen(md) {
+    --review-card-bg: #fff;
+  }
+  // Text-content
+  --text-content-hr-bg:#ebebeb;
 }

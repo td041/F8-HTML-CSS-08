@@ -32,11 +32,10 @@
     color: var(--product-brand);
   }
   &__row {
-    margin-top: 16px;
+    margin-top: auto;
+    align-items: center;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    align-items: center;
   }
   &__rating {
     display: flex;
@@ -56,7 +55,7 @@
     top: 0;
     left: 0;
   }
-  &__like-button{
+  &__like-button {
     position: absolute;
     bottom: 0;
     right: 0;

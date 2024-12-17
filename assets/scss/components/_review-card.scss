@@ -1,0 +1,74 @@
+@use "../abstracts";
+.review-card {
+  background-color: var(--review-card-bg);
+  border-radius: 16px;
+  padding: 30px;
+  height: 100%;
+  // Để các card có chiều cao như nhau khi responsive
+  display: flex;
+  flex-direction: column;
+  // Sử dụng flexbox để có thể căn ngôi sao ở dưới đáy (review-card__rating)
+  &__content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    @include abstracts.screen(xl) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    @include abstracts.screen(md) {
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__title {
+    //styleName: Medium 22;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  &__desc {
+    //styleName: Regular 16;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+  &__rating {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: auto;
+    @include abstracts.screen(xl) {
+      flex-direction: column;
+    }
+    @include abstracts.screen(md) {
+      flex-direction: row;
+    }
+    &-title {
+      //styleName: Medium 18;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+  }
+  &__five-star {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+  }
+  &__star {
+    width: 18px;
+    height: 18px;
+  }
+}
