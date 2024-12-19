@@ -278,6 +278,11 @@
     border-color: var(--header-actions-dropdown-border);
     border-style: solid;
   }
+  &__separate{
+    height: 1px;
+    margin: 20px 0;
+    background-color: var(--header-actions-dropdown-border);
+  }
   &__row {
     display: flex;
     align-items: center;

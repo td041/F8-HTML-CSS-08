@@ -713,11 +713,57 @@
           <img src="./assets/icons/search.svg" alt="" class="actions__icon icon" />
         </button>
       </div>
-      <div class="actions__group d-md-none">            
-        <button class="actions__button">
-          <img src="./assets/icons/heart.svg" alt="" class="actions__icon icon" />
-          <span class="actions__title">03</span>
-        </button>
+      <div class="actions__group d-md-none">
+        <div class="actions__button-wrap">
+          <button class="actions__button">
+            <img src="./assets/icons/heart.svg" alt="" class="actions__icon icon" />
+            <span class="actions__title">03</span>
+          </button>
+          <div class="actions-dropdown">
+            <div class="actions-dropdown__inner">
+              <img src="./assets/icons/arrow-up.png" alt="" class="actions-dropdown__arrow" />
+              <div class="actions-dropdown__top">
+                <h2 class="actions-dropdown__title">You have 3 item</h2>
+                <a href="#!" class="actions-dropdown__view-all">See All</a>
+              </div>
+              <div class="row row-cols-3 gx-2 actions-dropdown__list">
+                <div class="col">
+                  <article class="cart-preview-item">
+                    <div class="cart-preview-item__img-wrap">
+                      <img class="cart-preview-item__thumb" src="./assets/img/category/product-1.png" />
+                    </div>
+                    <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
+                    <p class="cart-preview-item__price">$329.00</p>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="cart-preview-item">
+                    <div class="cart-preview-item__img-wrap">
+                      <img class="cart-preview-item__thumb" src="./assets/img/category/product-2.png" />
+                    </div>
+                    <h3 class="cart-preview-item__title">Coffee Beans Espresso</h3>
+                    <p class="cart-preview-item__price">$39.99</p>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="cart-preview-item">
+                    <div class="cart-preview-item__img-wrap">
+                      <img class="cart-preview-item__thumb" src="./assets/img/category/product-3.png" />
+                    </div>
+                    <h3 class="cart-preview-item__title">Qualità Ora Mountain</h3>
+                    <p class="cart-preview-item__price">$47.00</p>
+                  </article>
+                </div>
+              </div>
+              <div class="actions-dropdown__separate"></div>
+              <div class="actions-dropdown__checkout">
+                <a href="#!" class="button button--primary button--rounded actions-dropdown__checkout-button"
+                  >Check Out All</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="actions__line"></div>
         <div class="actions__button-wrap">
           <button class="actions__button">
@@ -726,7 +772,7 @@
           </button>
           <div class="actions-dropdown">
             <div class="actions-dropdown__inner">
-              <img src="./assets/icons/arrow-up.png" alt="" class="actions-dropdown__arrow">
+              <img src="./assets/icons/arrow-up.png" alt="" class="actions-dropdown__arrow" />
               <div class="actions-dropdown__top">
                 <h2 class="actions-dropdown__title">You have 3 item</h2>
                 <a href="#!" class="actions-dropdown__view-all">See All</a>
