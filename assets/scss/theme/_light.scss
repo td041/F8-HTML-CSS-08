@@ -21,7 +21,7 @@ html {
   // Header
   --header-actions-dropdown-bg: #fff;
   --header-actions-drodown-shadow: rgba(200, 200, 200, 0.4);
-  --header-actions-dropdown-border: #d2d1d6;
+  --header-actions-dropdown-borders: #d2d1d6;
   // Side-bar
   --side-bar-bg: #fff;
   --side-bar-shadow: rgba(200, 200, 200, 0.4);
@@ -79,4 +79,11 @@ html {
   }
   // Text-content
   --text-content-hr-bg:#ebebeb;
+  // Checkout
+  --checkout-breadcrumbs-bg: #fff;
+  --checkout-cart-info-bg: #fff;
+  --checkout-cart-item-text: #171c28;
+  --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
+  --checkout-border-color: #292e39;
+  --checkout-gift-shadow: rgba(237,237,236,0.2);
 }

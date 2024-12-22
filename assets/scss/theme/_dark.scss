@@ -73,8 +73,15 @@ html.dark {
   }
   // Search-bar
   --search-bar-bg: #171c28;
-   // Review-card
-   --review-card-bg: #171c28;
+  // Review-card
+  --review-card-bg: #171c28;
   // Text-content
   --text-content-hr-bg:#3e4043;
+  // Checkout
+  --checkout-breadcrumbs-bg: #171c28;
+  --checkout-cart-info-bg: #171c28;
+  --checkout-cart-item-text: #fff;
+  --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
+  --checkout-border-color: #d2d1d6;
+  --checkout-gift-shadow:  rgba(23, 28, 40, 0.20);
 }
