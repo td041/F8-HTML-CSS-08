@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -98,16 +98,12 @@
                         <p class="cart-item__total-price">$47.00</p>
                         <div class="cart-item__control">
                           <button class="cart-item__control-button">
-                            <div class="cart-item__control">
                               <img src="./assets/icons/heart2.svg" alt="">
                               Save
-                            </div>
                           </button>
-                          <button class="cart-item__control-button">
-                            <div class="cart-item__control">
+                          <button class="cart-item__control-button js-toggle" toggle-target="#delete-confirm">
                               <img src="./assets/icons/trash.svg" alt="">
                               Delete
-                            </div>
                           </button>
                         </div>        
                       </div>
@@ -118,7 +114,7 @@
                       <img src="./assets/img/category/product-2.png" alt="" class="cart-item__thumb" />
                     </a>
                     <div class="cart-item__content">
-                      <div class="cart-item__content-left">
+                      <div class="cart-item__content-left">   
                         <h3 class="cart-item__title">
                           <a href="./product-detail.html">Lavazza Coffee Blends - Try the Italian Espresso</a>
                         </h3>
@@ -142,18 +138,14 @@
                       </div>
                       <div class="cart-item__content-right">
                         <p class="cart-item__total-price">$106.00</p>
-                        <div class="cart-item__control ">
+                        <div class="cart-item__control">
                           <button class="cart-item__control-button">
-                            <div class="cart-item__control">
                               <img src="./assets/icons/heart2.svg" alt="">
                               Save
-                            </div>
                           </button>
-                          <button class="cart-item__control-button">
-                            <div class="cart-item__control">
+                          <button class="cart-item__control-button js-toggle" toggle-target="#delete-confirm">
                               <img src="./assets/icons/trash.svg" alt="">
                               Delete
-                            </div>
                           </button>
                         </div>        
                       </div>
@@ -190,16 +182,12 @@
                         <p class="cart-item__total-price">$38.65</p>
                         <div class="cart-item__control">
                           <button class="cart-item__control-button">
-                            <div class="cart-item__control">
                               <img src="./assets/icons/heart2.svg" alt="">
                               Save
-                            </div>
                           </button>
-                          <button class="cart-item__control-button">
-                            <div class="cart-item__control">
+                          <button class="cart-item__control-button js-toggle" toggle-target="#delete-confirm">
                               <img src="./assets/icons/trash.svg" alt="">
                               Delete
-                            </div>
                           </button>
                         </div>        
                       </div>
@@ -277,5 +265,16 @@
     <script>
       load("#footer", "./templates/footer.html");
     </script>
+    <!-- Dialog -->
+    <div class="dialog" id="delete-confirm">
+      <div class="dialog__content" >
+        <div class="dialog__text">Are you serious?</div>
+        <div class="dialog__bottom">
+          <button class="button--small button button--text dialog__button js-toggle" toggle-target="#delete-confirm">Cancel</button>
+          <button class="button--small button button--primary dialog__button button--no-margin js-toggle" toggle-target="#delete-confirm">Confirm</button>
+        </div>
+      </div>
+      <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+    </div>
   </body>
 </html>

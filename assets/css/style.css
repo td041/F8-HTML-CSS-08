@@ -2396,11 +2396,16 @@ strong {
   border-radius: 6px;
   height: 46px;
   padding: 0 20px;
+  white-space: nowrap;
   font-weight: 500;
   font-size: 15px;
 }
 .button + .button:not(.button--no-margin) {
   margin-left: 20px;
+}
+.button--small {
+  height: 40px;
+  padding: 0 16px;
 }
 .button--text {
   color: #9e9da8;
@@ -3105,6 +3110,60 @@ strong {
   margin: 40px 0;
 }
 
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 0.2s;
+  transition: opacity, visibility;
+}
+.dialog__overlay {
+  background: rgba(116, 113, 113, 0.4);
+}
+.dialog__content {
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: min(450px, 100% - 40px);
+  background: var(--dialog-bg);
+  box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+  z-index: 1;
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+  gap: 30px;
+}
+@media (max-width: 767.98px) {
+  .dialog {
+    padding: 20px;
+  }
+  .dialog__bottom {
+    gap: 20px;
+  }
+  .dialog__button {
+    flex: 1;
+  }
+}
+
 html.dark {
   --text: #fff;
   --font: Gordita, sans-serif;
@@ -3163,6 +3222,8 @@ html.dark {
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
   --checkout-border-color: #d2d1d6;
   --checkout-gift-shadow: rgba(23, 28, 40, 0.20);
+  --dialog-bg:#2f3441;
+  --dialog-shadow: rgba(23, 28, 40, 0.20);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3232,6 +3293,8 @@ html {
   --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
   --checkout-border-color: #292e39;
   --checkout-gift-shadow: rgba(237,237,236,0.2);
+  --dialog-bg:#FFF;
+  --dialog-shadow:rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
