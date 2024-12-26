@@ -1,7 +1,7 @@
 @use "../abstracts";
 .checkout-page {
   display: flex;
-  background: #f6f6f6 !important;
+  background: #f6f6f6 ;
   flex-direction: column;
   min-height: 80vh;
   background: var(--product-detail-bg);
@@ -9,6 +9,9 @@
   &__breadcrumbs {
     background: var(--checkout-breadcrumbs-bg) !important;
   }
+}
+.shipping-page{
+  background-color: var(--shipping-bg);
 }
 .checkout-container {
   margin-top: 30px;
@@ -26,6 +29,19 @@
   }
   &--small {
     padding: 20px;
+  }
+  &__heading {
+    //styleName: Bold 24;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+  }
+  &__sub-heading {
+    //styleName: Medium 18;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    margin: 30px 0;
   }
   &__list {
     margin: -30px 0;
@@ -160,6 +176,9 @@
     border-radius: 10px;
     height: 44px;
     gap: 10px;
+    &-button {
+      display: flex;
+    }
   }
   &__total-price {
     //styleName: Bold 22;
@@ -228,5 +247,114 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+  }
+}
+.user-address {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    @include abstracts.screen(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__button {
+    @include abstracts.screen(md) {
+      height: 46px;
+    }
+  }
+  &__title {
+    //styleName: Medium 18;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  &__desc {
+    //styleName: Regular 15;
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  &___message {
+    margin-top: 30px;
+    font-weight: 500;
+  }
+  &__link {
+    color: #0071dc;
+  }
+}
+.address-card {
+  display: flex;
+  margin-top: 30px;
+  gap: 16px;
+  @include abstracts.screen(md) {
+    flex-direction: column;
+  }
+  &__left {
+    flex: 1;
+    display: flex;
+    gap: 16px;
+  }
+  &__title {
+    //styleName: Medium 18;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  &__desc {
+    //styleName: Regular 15;
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    width: min(520px, 90%);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 20px;
+    list-style: disc inside;
+    gap: 30px;
+    @include abstracts.screen(sm) {
+      flex-direction: column;
+      gap: 16px;
+    }
+    &-item {
+      margin-left: 8px;
+    }
+  }
+  &__control {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    &-button {
+      //styleName: Regular 18;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  &__checkbox {
+    &-input {
+      appearance: none;
+      &::before {
+        content: url("../icons/checkbox-uncheck.svg");
+      }
+      &:not(:checked)::before {
+        filter: var(--icon-color);
+      }
+      &:checked::before {
+        content: url("../icons/checkbox-checked.svg");
+      }
+    }
   }
 }
