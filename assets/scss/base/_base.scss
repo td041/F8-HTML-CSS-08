@@ -34,8 +34,17 @@ select {
   font-family: inherit;
   color: inherit;
 }
-input {
+input,
+textarea {
   background: transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  transition: background-color 1s 999s;
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
 }
 a {
   text-decoration: none;

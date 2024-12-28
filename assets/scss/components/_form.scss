@@ -5,6 +5,20 @@ $error-color: #ed4337;
     opacity: 0.5;
     pointer-events: none;
   }
+  &__row {
+    display: flex;
+    gap: 30px;
+    > * {
+      flex: 1;
+    }
+    @include abstracts.screen(md) {
+      gap: 20px;
+    }
+    @include abstracts.screen(sm) {
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
   &__group {
     margin-top: 30px;
     &-inline {
@@ -43,21 +57,38 @@ $error-color: #ed4337;
     color: $error-color;
     display: none;
   }
+  &__text-area,
   &__text-input {
-    border-radius: 10px;
     display: flex;
     align-items: center;
-    border: 1.5px solid #d2d1d6;
-    height: 50px;
     padding: 0 12px;
+    border-radius: 10px;
+    border: 1.5px solid #d2d1d6;
     &:focus-within {
       border-color: #77dae6;
     }
-    @include abstracts.screen(md) {
-      height: 48px;
+  }
+  &__text-area {
+    padding: 12px;
+    height: 100px;
+    &-input {
+      resize: none;
     }
   }
-  &__input {
+  &__text-input {
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    &--small {
+      height: 42px;
+      @include abstracts.screen(md) {
+        height: 48px;
+      }
+    }
+  }
+  &__input,
+  &__text-area-input {
+    width: 100%;
     flex: 1;
     height: 100%;
     font-size: 18px;
@@ -66,13 +97,113 @@ $error-color: #ed4337;
     &::placeholder {
       color: var(--form-placeholder-color);
     }
+    @include abstracts.screen(md) {
+      font-size: 1.6rem;
+    }
+  }
+  &__input {
     &-icon {
       // Margin-left vào icon để tránh tình trạng nhập đầy input
       margin-left: 12px;
     }
-    @include abstracts.screen(md) {
-      font-size: 1.6rem;
+  }
+  &__select-dialog {
+    position: absolute;
+    z-index: 1;
+    background: var(--form-select-dialog-bg);
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    bottom: 44px;
+    left: 10px;
+    max-height: 310px;
+    min-width: 230px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity, visibility, translate;
+    transition-duration: 0.2s;
+    translate: 0 8px;
+    box-shadow: 0 0 5px var(--form-select-dialog-shadow);
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      translate: 0;
     }
+    @include abstracts.screen(md) {
+      max-height: 294px;
+    }
+    @include abstracts.screen(sm) {
+      position: fixed;
+      max-width: initial;
+      max-height: initial;
+      inset: 0;
+      border-radius: 0;
+    }
+  }
+  &__options-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 8px;
+    overscroll-behavior: contain;
+  }
+  &__option {
+    padding: 8px 20px;
+    font-size: 1.4rem;
+    &:hover {
+      background: #ebebeb;
+    }
+    &--current {
+      background: rgba($color: #ffb700, $alpha: 0.5);
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        background: var(--form-option-hover-bg);
+      }
+    }
+    &:not(&--current):hover {
+      background: var(--form-option-hover-bg);
+      cursor: pointer;
+    }
+    @include abstracts.screen(lg) {
+      padding: 14px 20px;
+    }
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 1;
+    border-bottom: 1px solid var(--line);
+    padding: 0 20px;
+    height: 38px;
+    &-icon {
+      width: 16px;
+      margin-right: 10px;
+      @include abstracts.screen(sm) {
+        margin-left: 0px;
+      }
+    }
+    &-input {
+      flex: 1;
+      height: 100%;
+    }
+    @include abstracts.screen(lg) {
+      height: 42px;
+    }
+    @include abstracts.screen(sm) {
+      margin-top: 30px;
+      flex-direction: row-reverse;
+    }
+  }
+  &__close-dialog {
+    font-size: 3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 18px;
+    opacity: 0.8;
   }
   &__pull-right {
     margin-left: auto;

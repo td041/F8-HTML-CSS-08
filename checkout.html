@@ -265,16 +265,16 @@
     <script>
       load("#footer", "./templates/footer.html");
     </script>
-    <!-- Dialog -->
-    <div class="dialog" id="delete-confirm">
-      <div class="dialog__content" >
-        <div class="dialog__text">Are you serious?</div>
-        <div class="dialog__bottom">
-          <button class="button--small button button--text dialog__button js-toggle" toggle-target="#delete-confirm">Cancel</button>
-          <button class="button--small button button--primary dialog__button button--no-margin js-toggle" toggle-target="#delete-confirm">Confirm</button>
+    <!-- Modal -->
+    <div class="modal hide" id="delete-confirm">
+      <div class="modal__content" >
+        <div class="modal__text">Are you serious?</div>
+        <div class="modal__bottom">
+          <button class="button--small button button--text modal__button js-toggle" toggle-target="#delete-confirm">Cancel</button>
+          <button class="button--small button button--primary modal__button button--no-margin js-toggle" toggle-target="#delete-confirm">Confirm</button>
         </div>
       </div>
-      <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+      <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
     </div>
   </body>
 </html>

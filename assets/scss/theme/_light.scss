@@ -1,6 +1,7 @@
 @use "../abstracts";
 html {
   --text: #1a162e;
+  --line: #ebebeb;
   --font: Gordita, sans-serif;
   --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6945%) hue-rotate(211deg) brightness(101%)
     contrast(96%);
@@ -54,7 +55,9 @@ html {
   }
   // Forms
   --form-placeholder-color: #d2d1d6;
-  
+  --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+  --form-select-dialog-bg: #fff;
+  --form-option-hover-bg: #ebebeb;
   // Product detail
   --product-detail-bg: #fff;
   --product-detail-info-bg: #f6f6f6;

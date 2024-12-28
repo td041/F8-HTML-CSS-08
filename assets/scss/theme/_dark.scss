@@ -1,6 +1,7 @@
 @use "../abstracts";
 html.dark {
   --text: #fff;
+  --line: #fff;
   --font: Gordita, sans-serif;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
     contrast(103%);
@@ -54,7 +55,9 @@ html.dark {
   --auth-heading-color:#b9babe;
   // Forms
   --form-placeholder-color: #b9babe;
-
+  --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+  --form-select-dialog-bg: #292e39;
+  --form-option-hover-bg: #292e39;
   // Product detail
   --product-detail-bg: #292e39;
   --product-detail-info-bg: #171c28;

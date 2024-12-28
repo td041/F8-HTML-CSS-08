@@ -1,7 +1,7 @@
 @use "../abstracts";
 .checkout-page {
   display: flex;
-  background: #f6f6f6 ;
+  background: #f6f6f6;
   flex-direction: column;
   min-height: 80vh;
   background: var(--product-detail-bg);
@@ -10,7 +10,7 @@
     background: var(--checkout-breadcrumbs-bg) !important;
   }
 }
-.shipping-page{
+.shipping-page {
   background-color: var(--shipping-bg);
 }
 .checkout-container {
@@ -324,6 +324,7 @@
     @include abstracts.screen(sm) {
       flex-direction: column;
       gap: 16px;
+      align-items: flex-start;
     }
     &-item {
       margin-left: 8px;
