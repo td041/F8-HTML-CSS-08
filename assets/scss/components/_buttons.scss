@@ -58,7 +58,7 @@
       margin-left: 20px;
     }
   }
-  &--small{
+  &--small {
     height: 40px;
   }
   &--text {
@@ -70,6 +70,10 @@
     background-color: transparent;
     border: 1px solid #d2d1d6;
   }
+  &--danger {
+    background: #ed4337;
+    color: #fff;
+  }
   &--primary {
     color: #171c28;
     background-color: #ffb700;
@@ -77,6 +81,7 @@
   &--rounded {
     border-radius: 99px;
   }
+  &[disabled],
   &--disabled {
     opacity: 0.5;
     pointer-events: none;

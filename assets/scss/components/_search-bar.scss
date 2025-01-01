@@ -1,3 +1,4 @@
+@use "../abstracts";
 .search-bar {
   align-items: center;
   height: 50px;
@@ -9,7 +10,7 @@
     padding-left: 15px;
     height: 100%;
     // Height 100% để cho input cao bằng thẻ cha dễ bấm hơn
-    font-size: 14px;
+    font-size: 16px;
     line-height: 2rem;
     font-weight: 500;
     &::placeholder {

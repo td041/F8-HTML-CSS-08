@@ -8,6 +8,7 @@ $error-color: #ed4337;
   &__row {
     display: flex;
     gap: 30px;
+    align-items: flex-end;
     > * {
       flex: 1;
     }
@@ -142,11 +143,20 @@ $error-color: #ed4337;
       border-radius: 0;
     }
   }
+  &__dialog-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+  }
   &__options-list {
     flex: 1;
     overflow-y: auto;
     margin-top: 8px;
     overscroll-behavior: contain;
+    @supports (-webkit-touch-callout: none) {
+      padding-bottom: 300px;
+    }
   }
   &__option {
     padding: 8px 20px;
@@ -167,7 +177,8 @@ $error-color: #ed4337;
       cursor: pointer;
     }
     @include abstracts.screen(lg) {
-      padding: 14px 20px;
+      padding: 18px 30px;
+      font-size: 1.6rem;
     }
   }
   &__search {
@@ -190,11 +201,17 @@ $error-color: #ed4337;
       height: 100%;
     }
     @include abstracts.screen(lg) {
-      height: 42px;
+      height: 48px;
+      &-icon {
+        width: 20px;
+      }
     }
     @include abstracts.screen(sm) {
-      margin-top: 30px;
+      border: 1px solid var(--line);
+      margin: 10px 30px 0;
+      border-radius: 10px;
       flex-direction: row-reverse;
+      padding: 0 14px;
     }
   }
   &__close-dialog {
@@ -202,7 +219,7 @@ $error-color: #ed4337;
     position: absolute;
     right: 0;
     top: 0;
-    padding: 2px 18px;
+    padding: 12px 18px;
     opacity: 0.8;
   }
   &__pull-right {
@@ -293,6 +310,13 @@ $error-color: #ed4337;
       font-size: 14px;
       line-height: 20px;
       margin-bottom: 10px;
+    }
+    &--medium {
+      //styleName: Medium 18;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      margin-bottom: 20px;
     }
   }
   &__tags {

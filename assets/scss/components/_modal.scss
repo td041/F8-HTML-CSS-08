@@ -37,6 +37,9 @@
     overflow-y: auto;
     max-height: calc(100vh - 150px);
     padding-right: 20px;
+    @include abstracts.screen(sm) {
+      overflow-y: unset;
+    }
   }
   &__heading {
     font-size: 2rem;
@@ -74,14 +77,14 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 30px;
-    gap: 30px;
+    margin-top: 40px;
+    gap: 20px;
     padding-right: 20px;
     @include abstracts.screen(md) {
       gap: 20px;
     }
     @include abstracts.screen(sm) {
-      margin-top: 20px;
+      margin-top: 30px;
     }
   }
   &__button {
