@@ -44,6 +44,11 @@
       }
     }
   }
+  &__checkout-all {
+    @include abstracts.screen(md) {
+      width: 100%;
+    }
+  }
   &__heading {
     //styleName: Bold 24;
     font-size: 24px;
@@ -64,7 +69,7 @@
     margin: 30px 0;
   }
   &__list {
-    margin: -30px 0;
+    margin: -30px 0 0 0;
     @include abstracts.screen(md) {
       margin: -16px 0;
     }
@@ -80,6 +85,13 @@
     &--bold {
       font-size: 2.2rem;
       font-weight: 700;
+    }
+    &-md--block {
+      @include abstracts.screen(md) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
     }
   }
   &__separate {
@@ -140,22 +152,26 @@
   &__form {
     margin-bottom: 30px;
   }
-  &__form-row{
+  &__form-row {
     flex-direction: row;
     gap: 20px;
   }
+  &__check-all {
+    margin: 30px 0;
+  }
 }
+// End .cart-info
 .cart-info + .cart-info {
   margin-top: 30px;
 }
 .cart-item {
   display: flex;
-  gap: 30px;
+  // gap: 30px;
   padding: 30px 0;
   border-bottom: 1px solid var(--checkout-border-color);
   @include abstracts.screen(md) {
     padding: 16px 0;
-    gap: 16px;
+    // gap: 16px;
     &:last-child {
       border: none;
     }
@@ -164,6 +180,7 @@
     width: 172px;
     height: 172px;
     object-fit: contain;
+    margin: 0 30px 0 20px;
     @include abstracts.screen(xxl) {
       width: 150px;
       height: 150px;
@@ -175,6 +192,22 @@
     @include abstracts.screen(md) {
       width: 60px;
       height: 60px;
+      margin: 0 16px 0 14px;
+    }
+  }
+  &__control-wrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__checkout-button {
+    margin-top: auto;
+    @include abstracts.screen(md) {
+      max-width: 200px;
     }
   }
   &__content {
@@ -269,6 +302,7 @@
     color: #67b044;
   }
 }
+// End .cart-item
 .gift-item {
   display: flex;
   gap: 20px;
@@ -391,7 +425,7 @@
   background-color: var(--payment-item-bg);
   display: flex;
   align-items: center;
-  @include abstracts.screen(sm){
+  @include abstracts.screen(sm) {
     align-items: flex-start;
   }
   &--pointer {
@@ -422,7 +456,6 @@
     width: 70px;
     height: 54px;
     object-fit: cover;
-    
   }
   &__checkbox {
     display: flex;
@@ -452,7 +485,7 @@
     flex: 1;
     gap: 20px;
     margin-left: 20px;
-    @include abstracts.screen(sm){
+    @include abstracts.screen(sm) {
       flex-direction: column;
       align-items: flex-start;
     }
