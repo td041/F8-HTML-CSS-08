@@ -1,0 +1,98 @@
+@use "../abstracts";
+.payment-card {
+  background: var(--bg-color);
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  &__type {
+    //styleName: Medium 14;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  &__number {
+    //styleName: Medium 18;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-top: 37px;
+  }
+  &__label {
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+  &__value {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+  &__expired {
+    margin-left: 40px;
+    margin-right: auto;
+  }
+  &__circle {
+    --circle-width: 28px;
+    position: relative;
+    width: 42px;
+    height: var(--circle-width);
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: var(--circle-width);
+      height: var(--circle-width);
+      border-radius: 50%;
+    }
+    &::before {
+      left: 0;
+      background: #f94545;
+      z-index: 1;
+      mix-blend-mode: hard-light;
+    }
+    &::after {
+      right: 0;
+      background: #ffb700;
+    }
+  }
+}
+.new-card {
+  text-align: center;
+  border-radius: 10px;
+  border: 1px dashed #d2d1d6;
+  display: flex;
+  align-items: center;
+  min-height: 170px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  &__text {
+    //styleName: Medium 14;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #d2d1d6;
+  }
+}
