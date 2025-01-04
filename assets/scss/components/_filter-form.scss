@@ -33,6 +33,12 @@
       padding-bottom: 60px;
     }
   }
+  &__col{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   &__heading,
   &__content,
   &__footer {

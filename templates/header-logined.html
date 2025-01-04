@@ -719,6 +719,7 @@
             <img src="./assets/icons/heart.svg" alt="" class="actions__icon icon" />
             <span class="actions__title">03</span>
           </button>
+          <!-- Dropdown -->
           <div class="actions-dropdown">
             <div class="actions-dropdown__inner">
               <img src="./assets/icons/arrow-up.png" alt="" class="actions-dropdown__arrow" />
@@ -837,9 +838,55 @@
           </div>
         </div>
       </div>
-      <a href="./profile.html" class="actions__user">
-        <img src="./assets/img/avatar-header.jpg" alt="" class="actions__avatar" />
-      </a>
+      <div class="actions__user">
+          <a href="./profile.html">
+            <img src="./assets/img/avatar-header.jpg" alt="" class="actions__avatar" />
+            <div class="actions-dropdown avatar-actions-dropdown">
+              <div class="actions-dropdown__inner user-menu">
+                <img
+                  src="./assets/icons/arrow-up.png"
+                  alt=""
+                  class="actions-dropdown__arrow avatar-actions-dropdown__arrow"
+                />
+                <div class="user-menu__top">
+                  <img src="./assets/img/avatar-header.jpg" alt="" class="user-menu__avatar">
+                  <div class="">
+                    <p class="user-menu__name">Trinh Duc</p>
+                    <p class="user-menu__user-name">@trinhduc041</p>
+                  </div>
+                </div>
+                <ul class="user-menu__list">
+                  <li>
+                    <a href="./profile.html" class="user-menu__link">
+                      <img src="./assets/icons/user.svg" alt="" class="icon user-menu__icon">
+                      Profile</a>
+                  </li>
+                  <li>
+                    <a href="./favourite.html" class="user-menu__link">
+                      <img src="./assets/icons/favourite.svg" alt="" class="icon user-menu__icon">
+                      Favourite List</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="user-menu__link user-menu__separate" id="switch-theme-btn">
+                      <img src="./assets/icons/sun-dark.svg" alt="" class="icon user-menu__icon" >
+                      <span>Dark Mode</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="user-menu__link">
+                      <img src="./assets/icons/settings.svg" alt="" class="icon user-menu__icon">
+                      Settings</a>
+                  </li>
+                  <li>
+                    <a href="./index.html" class="user-menu__link user-menu__separate">
+                      <img src="./assets/icons/logout.svg" alt="" class="icon user-menu__icon">
+                      Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </a>
+      </div>
     </div>
   </div>
 </div>

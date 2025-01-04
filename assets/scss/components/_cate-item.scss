@@ -1,6 +1,6 @@
 @use "../abstracts";
 .cate-item {
-  padding: 20px 26px 20px 20px;
+  padding: 20px;
   background-color: var(--cate-item-bg);
   display: flex;
   border-radius: 16px;
@@ -27,8 +27,8 @@
   &__thumb {
     background-color: var(--cate-item-thumb);
     border-radius: 8px;
-    width: 116px;
-    height: 116px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     display: block;
     @include abstracts.screen(xl) {

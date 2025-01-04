@@ -1,6 +1,10 @@
-<svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5134 20.5003H6.16555C3.09919 20.5003 0.746786 19.3928 1.41498 14.9351L2.19301 8.89394C2.60491 6.66968 4.02367 5.81842 5.26852 5.81842H15.447C16.7102 5.81842 18.0466 6.73375 18.5225 8.89394L19.3006 14.9351C19.8681 18.8894 17.5797 20.5003 14.5134 20.5003Z" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.6502 5.59873C14.6502 3.21265 12.716 1.27836 10.3299 1.27836V1.27836C9.18088 1.27349 8.07727 1.72652 7.26308 2.53727C6.44889 3.34803 5.9912 4.44971 5.99121 5.59873H5.99121" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M13.296 10.1021H13.2502" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.46492 10.1022H7.41916" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Iconly/Light/Bag">
+<g id="Bag">
+<path id="Path_33955" fill-rule="evenodd" clip-rule="evenodd" d="M16.5134 21.5003H8.16555C5.09919 21.5003 2.74679 20.3927 3.41498 15.9351L4.19301 9.89387C4.60491 7.66962 6.02367 6.81836 7.26852 6.81836H17.447C18.7102 6.81836 20.0466 7.73369 20.5225 9.89387L21.3006 15.9351C21.8681 19.8893 19.5797 21.5003 16.5134 21.5003Z" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Path_33956" d="M16.6502 6.59873C16.6502 4.21265 14.716 2.27836 12.3299 2.27836V2.27836C11.1809 2.27349 10.0773 2.72652 9.26308 3.53727C8.44889 4.34803 7.9912 5.44971 7.99121 6.59873H7.99121" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_192" d="M15.296 11.1022H15.2502" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_193" d="M9.46492 11.1022H9.41916" stroke="#1A162E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
 </svg>

@@ -13,6 +13,7 @@
     position: relative;
     width: 100%;
     flex-shrink: 0;
+    // padding-top: 26%;
     padding-top: 34%;
     @include abstracts.screen(md) {
       padding-top: 50%;
